@@ -5,7 +5,10 @@
 .name {
     font-size: 30px;
 }
-
+.temp{
+    width: 1000px;
+    margin:auto;
+}
 .price {
     font-size: 18px;
 }
