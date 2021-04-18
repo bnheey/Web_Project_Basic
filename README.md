@@ -16,7 +16,11 @@
     >조건. 로그인 안내 내용, ID, PW 입력 칸은 style 태그를 이용하여 가로, 세로 축 기준 중앙으로 배치한다.
 
     실행 결과는 아래 그림과 같다.
+<<<<<<< HEAD
     <p align = center><img src = "image/login.PNG" alt="로그인" width = "320" height = "340"><p>
+=======
+    <p align = center><img src = "image/login.PNG" alt="로그인" width = "300" height = "300"><p>
+>>>>>>> e0f5302115f289931b0fa4d9befea0bed64eb8e6
 
 2. 로그인(CSS 분리)<br>
 
@@ -24,8 +28,11 @@
 
     협업을 하는 경우 CSS와 HTML 파일의 분리는 필연적이다.<br>
     style 태그 내부의 내용을 main.css 파일로 옮겨 파일을 분리하였다.
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e0f5302115f289931b0fa4d9befea0bed64eb8e6
      <p align = center><img src = "image/login_noCSS.PNG" alt="로그인" width = "300" height = "300"><p>
 
      추가로, 페이지를 구성하는 글자의 <a src="https://fonts.google.com/?subset=korean"> 폰트</a>도 변경하였다.
