@@ -1,0 +1,94 @@
+* {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.name {
+    font-size: 30px;
+}
+
+.price {
+    font-size: 18px;
+}
+
+.wrap {
+    width: 750px;
+    margin: 25px auto;
+}
+
+.order {
+    width: 750px;
+    margin: 30px auto;
+    font-size: 18px;
+}
+
+.get_in_touch {
+    max-width: 750px;
+    margin: 80px auto;
+    position: relative;
+    box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0, 1);
+}
+
+.get_in_touch .title {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 30px;
+    line-height: 48px;
+    padding-bottom: 20px;
+    color: black;
+    background: linear-gradient(to right, lightslategrey 20%, black 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+}
+
+
+.contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: slategray;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.contact-form .input-text:not([value=""]) + .label,
+.contact-form .input-text:focus + .label {
+    transform: translateY(-30px);
+}
+
+.contact-form .input-text:focus {
+    outline: none;
+}
+
+.contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: lightslategrey;
+    cursor: text;
+    text-transform: capitalize;
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact-form .sumbit {
+    display: inline-block;
+    background-image: linear-gradient(125deg, gray, black);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding-bottom: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+<!-- 협업을 하는 경우 CSS와 HTML 파일의 분리는 필연적이다.
+     style 태그 내부의 내용을 main.css 파일로 옮겨 파일을 분리하였다.
+     https://fonts.google.com/?subset=korean
+     위의 사이트를 이용해 폰트도 변경하였다.-->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- 폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="wrap">
+        <div class="login">
+            <h1>로그인 페이지</h1>
+            <h5>아이디, 비밀번호를 입력해주세요</h5>
+        </div>
+        <div class="idPw">
+            <p>ID: <input type="text"/></p>
+            <p>PW: <input type="password"/></p>
+        </div>
+
+        <button>로그인하기</button>
+    </div>
+</div>
+</body>
+</html>

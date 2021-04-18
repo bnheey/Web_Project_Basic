@@ -1,0 +1,44 @@
+/*
+*{...} 내부의 내용 : 모든 부분에 * 내부에 기술한 내용을 적용-->
+ */
+
+* {
+    font-family: 'Noto Serif KR', serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* 세로 축 기준으로도 가운데 정렬을 하기 위해서는 flex를 이용해야함*/
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    color: ghostwhite;
+    width: 300px;
+    height: 200px;
+    background-image: url("https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg");
+    /* cover - 이미지를 최대한 맞춰서 보여줌 */
+    background-size: cover;
+    /* 주어진 공간 내에 이미지를 가운데 정렬 */
+    background-position: center;
+    /* border-radius : 10px; - background 이미지에 round를 줌*/
+    border-radius: 10px;
+    /* login class의 h1, h5 텍스트를 가운데 정렬*/
+    text-align: center;
+    padding-top: 60px
+}
+
+/* 로그인 안내 내용(설명, ID/PW input, 버튼)을 중앙에 배치*/
+.wrap {
+    /* auto : 창의 크기가 변해도 가운데 정렬이 가능하도록 해줌 */
+    margin: auto;
+    width: 300px;
+}

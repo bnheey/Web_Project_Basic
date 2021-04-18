@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happii's Shop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_shop.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Happii's Shop</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Clothes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Food</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cleaning</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Others</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="wrap">
+    <img src="../../image/product2.jpg" class="figure-img img-fluid rounded" alt="dog cloth" width="750x" height="500px">
+    <p class="price">
+        <b class="name">강아지 후리스</b>&nbsp &nbsp 가격 : 25,000원 / 개
+    </p>
+    <p class="price">요즘 같이 쌀쌀한 날씨, 우리 강아지 감기가 걱정되셨나요?<br>
+        지금 딱 입기 좋은, 강아지 후리스를 준비했습니다!🐾🐶<br>
+        부드러운 소재로 강아지가 좋아할 뿐만 아니라, 디자인도 최고! 인싸 강아지로 변신해보세요!😝<br>
+        색상은 white⚪, black⚫, pink🔴 3가지 색상으로 구성되어 있습니다! 서둘러 구매해보세요!🙌</p>
+
+    <section class="get_in_touch">
+        <h1 class="title"><b>Order</b></h1>
+
+        <div class="container">
+            <div class="contact-form row">
+                <div class="form-field col-lg-6">
+                    <input onkeyup="this.setAttribute('value', this.value);" value="" id="name" class="input-text" type="text" name="">
+                    <label for="name" class="label">주문자 성함 :</label>
+                </div>
+
+                <div class="form-field col-lg-6">
+                    <select id="quentity" class="input-text" size=5 multiple>
+                        <option label="1" selected>1개</option>
+                        <option label="2">2개</option>
+                        <option label="3">3개</option>
+                        <option label="4">4개</option>
+                        <option label="5">5개</option>
+                    </select>
+                    <label for="quentity" class="label">수량 :</label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input onkeyup="this.setAttribute('value', this.value);" value="" id="message" class="input-text" type="text" name="">
+                    <label for="message" class="label">주소 : </label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input onkeyup="this.setAttribute('value', this.value);" value="" id="phone" class="input-text" type="text" name="">
+                    <label for="phone" class="label">전화 번호: </label>
+                </div>
+                <div class="form-field col-lg-12">
+                    <input class="sumbit" type="submit" value="submit" name=""></input>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

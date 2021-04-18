@@ -1,0 +1,43 @@
+<!--flex 기본 개념에 대한 학습-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            /* 굵기 1px, 실선, 빨강 */
+            border: 1px solid red;
+            height: 100%;
+            display: flex;
+            /* flex-direction: 방향 정렬 기준 */
+            flex-direction: column;
+            /* justify-content, align-items: 선택된 방향으로, 나머지 정렬 방법 */
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .items {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="items"></div>
+    <div class="items"></div>
+    <div class="items"></div>
+    <div class="items"></div>
+
+</div>
+
+</body>
+</html>
