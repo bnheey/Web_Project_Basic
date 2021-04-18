@@ -15,12 +15,12 @@ h1, h5, input, button 태그를 이용하여 로그인 페이지를 만든다.
     >조건 2. 글자색과 background 이미지를 설정한다. 이때 이미지는 이미지 태그를 이용해 삽입해도 되지만, 이 경우 별도로 글을 배치하거나 다른 꾸밈을 주기에 어려움이 있기 때문에, CSS문법을 사용해 적용한다.
   
     실행 결과는 아래 그림과 같다.
-    <p align = center><img src = "image/login.png" alt="로그인" width = "300" height = "300"><p>
+    <p align = center><img src = "image/login.PNG" alt="로그인" width = "300" height = "300"><p>
 
 2. 로그인(CSS 분리)<br>
 협업을 하는 경우 CSS와 HTML 파일의 분리는 필연적이다.<br>
     style 태그 내부의 내용을 main.css 파일로 옮겨 파일을 분리하였다.
-     <p align = center><img src = "image/login_noCSS.png" alt="로그인" width = "300" height = "300"><p>
+     <p align = center><img src = "image/login_noCSS.PNG" alt="로그인" width = "300" height = "300"><p>
 
      추가로, 페이지를 구성하는 글자의 <a src="https://fonts.google.com/?subset=korean"> 폰트</a>도 변경하였다.
      해당 내용은 <a src="https://github.com/bbjoite09/SeriesD/blob/master/practice/week01/login_noCSS.html">여기</a>에서 확인할 수 있다.
