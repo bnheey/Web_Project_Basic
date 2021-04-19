@@ -3,7 +3,7 @@
 🖌 각 Week 카테고리는 수업 및 과제로 구성되어 있으며, 과제는 📒 에서 확인할 수 있다.<br><br>
 
 ## 🖼 Week01
-<details open>
+<details>
   <summary><b>1.1 HTML & CSS 기초</b></summary><br>
   HTML 기초 태그를 알아보고, 로그인 창을 구현해 보았다,<br><br>
 
@@ -24,8 +24,8 @@
 
     > practice/week01/login_noCSS.html
 
-    협업을 하는 경우 CSS와 HTML 파일의 분리는 필연적이다.<br>
-    style 태그 내부의 내용을 main.css 파일로 옮겨 파일을 분리하였다.
+    협업을 하는 경우 파일의 분리는 필연적이다.<br>
+    style 태그 내부의 내용을 main.css 파일로 옮겨 html/CSS 파일을 분리하였다.
 
      <p align = center><img src = "image/login_noCSS.PNG" alt="로그인" ><p>
 
@@ -42,7 +42,7 @@
   부트스트랩을 이용해 클론페이지를 만들어 보았다. 실습 결과는 아래와 같다.
   <p align = center><img src = "image/bootstrap.PNG" alt="로그인" ><p><br><br>
 </details>
-<details>
+<details open>
 <summary>📒 인터넷 쇼핑몰 페이지 만들기</summary><br>
 임의의 상품을 판매하는 페이지를 만들어 보았다. 버튼에 대한 반응은 따로 처리하지 않았다.<br>
 
