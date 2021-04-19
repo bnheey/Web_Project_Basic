@@ -50,7 +50,8 @@
 
 >practice/css/style_shop.css
 
-해당 내용은 <a src="https://github.com/bbjoite09/SeriesD/practice/week01/product.html">여기</a>에서 확인할 수 있다.<br>
+해당 내용은 <a src="https://github.com/bbjoite09/SeriesD/blob/master/practice/week01/product.html">여기</a>에서 확인할 수 있다.<br>
+
 <p align = center><img src = "image/happii_shop.PNG" alt="로그인"><p>
 <br>
 </details>
