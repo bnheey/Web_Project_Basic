@@ -79,3 +79,48 @@ for (let i = 0; i < scores.length; i++) {
         console.log(scores[i]["name"])
     }
 }
+
+function calculateSum(n) {
+    let sum = 0
+    for (let i = 1; i < n; i++) {
+        sum += i
+    }
+    return sum
+}
+
+exports.calculateSum = calculateSum
+
+function countBerry(basket) {
+    // basket 변수는 리스트
+    let count = 0
+    for (let i = 0; i < basket.length; i++) {
+        if (basket[i] === '딸기') {
+            count += 1
+        }
+    }
+    return count
+}
+
+exports.countBerry = countBerry // 함수 자체를 할당
+
+
+
+// 미세먼지(PM10)의 값이 25 미만인 측정소(구 단위, MSRSTE_NM)와 미세먼지 수치를 출력하기
+function countAir(cityAir) {
+    let state = []
+    for (let i = 0; i < cityAir.length; i++) {
+        let isCleanAir = cityAir[i]["PM10"] < 25
+        if (isCleanAir) {
+            state.push(cityAir[i]['MSRSTE_NM'])
+            console.log("미세먼지 수치가 25㎍/㎥ 보다 작은 구 :", cityAir[i]['MSRSTE_NM'] + ",", cityAir[i]['PM10'] + "㎍/㎥")
+        }
+    }
+    return state
+}
+
+exports.countAir = countAir
+
+function printAir() {
+    let state = countAir(cityAir)
+    console.log(state)
+}
