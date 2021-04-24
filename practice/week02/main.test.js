@@ -431,6 +431,7 @@ test(
                 ARPLT_MAIN: "PM25",
             },
         ];
+        // 리스트를 비교할 때는 toBe 대신 toEqual을 사용
         expect(main.countAir(cityAir)).toEqual(
             [
                 '중구', '종로구',

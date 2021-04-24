@@ -1,0 +1,33 @@
+브라우저를 띄우기까지 백엔드에서 무슨 일이 일어나는가?
+- 여러가지 통신과정
+
+<그중에 하나인 HTTP에 대해서>
+HTTP에는 request와 response가 있다.
+
+	          request
+클라이언트	->	  서버
+		<-
+(브라우저)	          response	(웹서버)
+		
+
+
+둘사이의 통신규약이 HTTP
+최근에는 security 보안까지 추가한 HTTPS 사용(둘이 보안 외에 별 차이는 없음)
+
+<request 단계>
+1. url : http://www.naver.com/~~ 
+     <- 호스트(어떤 컴퓨터냐?)/ path(컴퓨터의 어느 폴더냐?) ->
+
+	http://www.naver.com/~~ ? ~~&
+	- 호스트부터 물음표까지가 path
+	- path이후 ~ &까지가 query string
+
+2. method(type) : DELETE(지우기), GET(가져오기), POST(추가하기) ... 등
+3. data : POST 메소드에서만 사용하는 정보 (위에서 query string은 GET만 사용함)
+
+
+<response 단계>
+status code : OOO
+	- 200 : 정상 	   - 200번대는 정상적으로 작동한다는 내용
+	- 404 : datd not found - 400번대는 클라이언트 문제
+	- 500 : 서버가 죽음 	   - 500번대는 서버 문제
