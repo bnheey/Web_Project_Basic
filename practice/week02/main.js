@@ -28,11 +28,15 @@ let 은 언제 변수를 선언했는지 확인해 이후 개발, 잘못된걸 �
 -> var은 버그를 발생시킬 확률이 높아 사용하지 않음.
  */
 
+// 함수 - 이 파일 내에서만 유효
 function sum(num1, num2) {
     let result = num1 + num2
     console.log("result : ", result)
     return result
 }
+
+// 외부 파일에서도 sum 함수 사용 가능하도록 변경
+exports.sum = sum
 
 console.log(sum(10, 20))
 
@@ -70,6 +74,8 @@ let scores = [
     {'name': '동희', 'score': 30},
 ]
 
-for(let i = 0; i <scores.length; i ++){
-    console.log(scores[i]["name"])
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i]['score'] > 50) {
+        console.log(scores[i]["name"])
+    }
 }
