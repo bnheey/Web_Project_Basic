@@ -1,0 +1,54 @@
+<!Doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Email input</title>
+
+    <!-- JQuery를 import 합니다 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        div.question-box {
+            margin: 10px 0 20px 0;
+        }
+    </style>
+
+    <script>
+        function validateEmail() {
+            // 1. input-email 값을 가져온다.
+            let email = $("#input-email").val();
+            // 2. 만약 가져온 값에 @가 있으면 (includes 이용하기 - 찾아보자!)
+            if (email[0] === '@') {
+                alert('아이디를 입력해주세요.')
+            } else if (email.includes('@')) {
+                // 3. contact@gmail.com -> gmail 만 추출해서
+                let domain = email.split('@')[1];
+                let domainValue = domain.split('.')[0];
+                // 4. alert(도메인 값);으로 띄우기
+                alert(domainValue);
+            }
+            // 5. 만약 이메일이 아니면 '이메일이 아닙니다.' 라는 얼럿 띄우기
+            else {
+                alert('이메일이 아닙니다.')
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+<h1>jQuery + Javascript의 조합을 연습하자!</h1>
+
+<div class="question-box">
+    <h2>이메일 판별 함수 만들기</h2>
+    <h5>1. 버튼을 눌렀을 때 입력받은 이메일로 얼럿 띄우기</h5>
+    <h5>2. 이메일이 아니면(@가 없으면) '이메일이 아닙니다'라는 얼럿 띄우기</h5>
+    <h5>[완성본]3. 이메일 도메인만 얼럿 띄우기</h5>
+    <input id="input-email" type="text"/>
+    <button onclick="validateEmail()">클릭</button>
+</div>
+</body>
+
+</html>
