@@ -5,7 +5,7 @@
 ## 🖼 Week01
 <details>
   <summary><b>1.1 HTML & CSS 기초</b></summary><br>
-  HTML 기초 태그를 알아보고, 로그인 창을 구현해 보았다,<br><br>
+  HTML 기초 태그를 알아보고, 로그인 창을 구현해 보았다.<br><br>
 
 1. 로그인<br>
 
@@ -57,3 +57,16 @@
 </details>
 
 
+## 🖼 Week02
+<details open>
+  <summary><b>2.1 JavaScript & jQuery</b></summary><br>
+  Week01에서 학습했던 HTML, CSS만으로는 정적인 화면 표현만 가능하였다. 이에 동적 움직임을 줄 수 있도록 하는 언어가 'Javascript'이다. Javascript는 객체 기반의 프로그래밍 언어이며, ECMAScript의 표준 사양을 가장 잘 구현한 언어로 대부분의 브라우저에서 지원한다.<br><br>
+</details>
+<details>
+  <summary><b>2.2 JavaScript & jQuery</b></summary><br>
+  HTML 기초 태그를 알아보고, 로그인 창을 구현해 보았다,<br><br>
+</details>
+<details>
+  <summary><b>📒</b></summary><br>
+  HTML 기초 태그를 알아보고, 로그인 창을 구현해 보았다,<br><br>
+</details>
