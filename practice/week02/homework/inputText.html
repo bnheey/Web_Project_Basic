@@ -17,7 +17,7 @@
     <script>
         function isEmpty() {
             // 1. input-value의 입력값을 가져온다.
-            let text = document.getElementById('input-value').value;
+            let text = $("#input-value").val();
             // 2. 만약 입력값이 빈칸이면 if(입력값=='')
             if (text === '') {
                 alert("입력하세요!");
