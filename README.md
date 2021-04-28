@@ -44,7 +44,7 @@
   부트스트랩을 이용해 클론페이지를 만들어 보았다. 실습 결과는 아래와 같다.
   <p align = center><img src = "image/bootstrap.PNG" alt="로그인" ><p><br><br>
 </details>
-<details open>
+<details>
 <summary><b>📒 나만의 one-page 쇼핑몰_01</b></summary><br>
 임의의 상품을 판매하는 페이지를 만들어 보았다. 버튼에 대한 반응은 따로 처리하지 않았다.<br>
 
@@ -60,7 +60,7 @@
 
 
 ## 🖼 Week02
-<details open>
+<details>
   <summary><b>2.1 JavaScript & jQuery</b></summary><br>
 
   Week01에서 학습했던 HTML, CSS만으로는 정적인 화면 표현만 가능하였다. 이에 동적 움직임을 줄 수 있도록 하는 언어가 <code>Javascript</code>이다. Javascript는 객체 기반의 프로그래밍 언어이며, ECMAScript의 표준 사양을 가장 잘 구현한 언어로 대부분의 브라우저에서 이를 지원한다.(모든 웹 서버는 HTML, CSS, Javascript를 응답 데이터로 전송함.)<br><br>
@@ -117,7 +117,7 @@
 
   <br>
 </details>
-<details>
+<details open>
   <summary><b>📒 Javascript and jQuery Practice</b></summary><br>
   1. Javascript
   
@@ -145,7 +145,7 @@
 
   <br><br>
 </details>
-<details>
+<details open>
 <summary><b>📒 나만의 one-page 쇼핑몰_02</b></summary><br>
 
 week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사용하여 아래 조건을 추가한다.<br>
@@ -162,7 +162,7 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 - 사용자 주문 정보 미기입시 alert<br><br>
 <p align=center><img src="image/shop_alert.PNG" width="500"></p>
 </details>
-<details>
+<details open>
 <summary><b>📒 Ajax Practice</b></summary><br>
 
 - <a href="https://openlibrary.org/subjects/love.json?published_in=1900-2000"> 책 API</a>를 활용하여 사랑에 관한 책 리스트를 출력한다.
