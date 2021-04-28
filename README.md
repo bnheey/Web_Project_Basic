@@ -4,6 +4,7 @@
 🖌 각 Week 카테고리는 수업 및 과제로 구성되어 있으며, 과제는 📒 에서 확인할 수 있다.<br><br>
 
 ## 🖼 Week01
+
 <details>
   <summary><b>1.1 HTML & CSS 기초</b></summary><br>
   HTML 기초 태그를 알아보고, 로그인 창을 구현해 보았다.<br><br>
@@ -44,7 +45,7 @@
   <p align = center><img src = "image/bootstrap.PNG" alt="로그인" ><p><br><br>
 </details>
 <details open>
-<summary>📒 인터넷 쇼핑몰 페이지 만들기</summary><br>
+<summary>📒 나만의 one-page 쇼핑몰_01</summary><br>
 임의의 상품을 판매하는 페이지를 만들어 보았다. 버튼에 대한 반응은 따로 처리하지 않았다.<br>
 
 ><a href ="https://github.com/bbjoite09/SeriesD/blob/master/practice/week01/product.html">practice/week01/product.html</a>
@@ -59,7 +60,7 @@
 
 
 ## 🖼 Week02
-<details open>
+<details>
   <summary><b>2.1 JavaScript & jQuery</b></summary><br>
 
   Week01에서 학습했던 HTML, CSS만으로는 정적인 화면 표현만 가능하였다. 이에 동적 움직임을 줄 수 있도록 하는 언어가 <code>Javascript</code>이다. Javascript는 객체 기반의 프로그래밍 언어이며, ECMAScript의 표준 사양을 가장 잘 구현한 언어로 대부분의 브라우저에서 이를 지원한다.(모든 웹 서버는 HTML, CSS, Javascript를 응답 데이터로 전송함.)<br><br>
@@ -124,3 +125,11 @@
 
   <br><br>
 </details>
+<details open>
+<summary><b>📒 나만의 one-page 쇼핑몰_02</b></summary><br>
+week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajex를 사용하여 아래 조건을 추가한다.
+
+> 조건1. 사용자가 Order란에 주문자 성함, 수량, 주소, 전화번호를 기입하지 않았을 때 alert를 보낸다.
+
+>조건2. <a href="https://api.manana.kr/exchange/rate.json">환율정보 API</a>를 활용하여 원화 가격 우측에 달러 가격을 표시한다.
+
