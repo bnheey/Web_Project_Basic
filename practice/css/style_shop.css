@@ -5,10 +5,12 @@
 .name {
     font-size: 30px;
 }
-.temp{
+
+.temp {
     width: 1000px;
-    margin:auto;
+    margin: auto;
 }
+
 .price {
     font-size: 18px;
 }
@@ -60,6 +62,7 @@
     line-height: 26px;
     font-weight: 400;
 }
+
 
 .contact-form .input-text:not([value=""]) + .label,
 .contact-form .input-text:focus + .label {

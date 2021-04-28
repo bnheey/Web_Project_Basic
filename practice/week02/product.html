@@ -7,6 +7,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style_shop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        function pushOrder() {
+            let oName = $("#name").val();
+            let oQuentity = $("#quentity").val();
+            let oAddress = $("#address").val();
+            let oPhone = $("#phone").val();
+
+            if (oName === '') {
+                alert('이름을 입력해주세요')
+            } else if (oQuentity === '') {
+                alert('수량을 입력해주세요')
+            } else if (oAddress === '') {
+                alert('주소를 입력해주세요')
+            } else if (oPhone === '') {
+                alert('전화번호를 입력해주세요')
+            }
+        }
+
+        $(document).ready(function () {
+            console.log('다 로딩됐다!')
+            $.ajax({
+                type: "GET",
+                url: "https://api.manana.kr/exchange/rate.json",
+                data: {},
+                success: function (response) {
+                    for (let i = 0; i < response.length; i++) {
+                        if(response[i]['name']==="USDKRW=X"){
+                            let dollar = (25000/response[i]['rate']).toFixed(3);
+                            $("#exchange").text(`달러-원 환율 : ${dollar}$`);
+                        }
+                    }
+                }
+            })
+        })
+    </script>
 
 </head>
 <body>
@@ -14,7 +51,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Happii's Shop</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -35,7 +73,8 @@
                     <a class="nav-link" href="#">Cleanings</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Others</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">Others</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
@@ -54,9 +93,11 @@
 </div>
 
 <div class="wrap">
-    <img src="../../image/product2.jpg" class="figure-img img-fluid rounded" alt="dog cloth" width="750x" height="500px">
+    <img src="../../image/product2.jpg" class="figure-img img-fluid rounded" alt="dog cloth" width="750x"
+         height="500px">
     <p class="price">
-        <b class="name">강아지 후리스</b>&nbsp &nbsp 가격 : 25,000원 / 개
+        <b class="name">강아지 후리스</b>&nbsp &nbsp 가격 : 25,000원 / 개 &nbsp &nbsp
+        <span style="color: cornflowerblue" id="exchange">달러-원 환율 :</span>
     </p>
     <p class="price">요즘 같이 쌀쌀한 날씨, 우리 강아지 감기가 걱정되셨나요?<br>
         지금 딱 입기 좋은, 강아지 후리스를 준비했습니다!🐾🐶<br>
@@ -69,25 +110,27 @@
         <div class="container">
             <div class="contact-form row">
                 <div class="form-field col-lg-6">
-                    <input onkeyup="this.setAttribute('value', this.value);" value="" id="name" class="input-text" type="text" name="">
+                    <input onkeyup="this.setAttribute('value', this.value);" value="" id="name" class="input-text"
+                           type="text" name="">
                     <label for="name" class="label">주문자 성함 :</label>
                 </div>
-
                 <div class="form-field col-lg-6">
                     <input onkeyup="this.setAttribute('value', this.value);" value="" id="quentity" class="input-text"
                            type="number" name="">
                     <label for="quentity" class="label">수량 : </label>
                 </div>
                 <div class="form-field col-lg-12">
-                    <input onkeyup="this.setAttribute('value', this.value);" value="" id="message" class="input-text" type="text" name="">
-                    <label for="message" class="label">주소 : </label>
+                    <input onkeyup="this.setAttribute('value', this.value);" value="" id="address" class="input-text"
+                           type="text" name="">
+                    <label for="address" class="label">주소 : </label>
                 </div>
                 <div class="form-field col-lg-12">
-                    <input onkeyup="this.setAttribute('value', this.value);" value="" id="phone" class="input-text" type="text" name="">
+                    <input onkeyup="this.setAttribute('value', this.value);" value="" id="phone" class="input-text"
+                           type="text" name="">
                     <label for="phone" class="label">전화 번호: </label>
                 </div>
                 <div class="form-field col-lg-12">
-                    <input class="sumbit" type="submit" value="submit" name=""></input>
+                    <input class="sumbit" type="submit" onclick="pushOrder()" value="submit" name=""></input>
                 </div>
             </div>
         </div>
