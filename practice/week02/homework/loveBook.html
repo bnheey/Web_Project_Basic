@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>20세기 사랑 주제의 책 보기</title>
+    <!-- JQuery를 import 합니다 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        div.question-box {
+            color: white;
+            margin: 10px 0 20px 0;
+            background-image: url("https://p0.pikist.com/photos/714/496/book-book-pages-novel-paperback-pitched-open-open-book-read-read-out.jpg");
+            background-position: center;
+        }
+
+        table {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            // 창을 새로고침할 때마다 실행할 함수를 여기에 입력합니다.
+            $('#book-info').empty();
+        });
+
+        function showBookInfo() {
+            $.ajax({
+                type: "GET",
+                url: "https://openlibrary.org/subjects/love.json?published_in=1900-2000",
+                data: {},
+                success: function (response) {
+                    let work = response["works"];
+                    for(let i = 0; i<work.length; i++){
+                        let title = work[i]['title'];
+                        let author = work[i]['authors'][0]['name']
+
+                        let grid = `<tr>
+                                <td>${title}</td>
+                                <td>${author}</td>
+                              </tr>`;
+
+                        $('#book-info').append(grid);
+                    }
+                }
+            })
+        }
+    </script>
+
+</head>
+<body>
+<h1>Javascript + jQuery + Ajax 연습하기</h1>
+
+<hr/>
+
+<div class="question-box">
+    <h2>20세기 사랑 주제의 책 보기</h2>
+    <p>모든 책의 제목(title),작가 이름(authors)을 화면에 보여주세요</p>
+    <p>업데이트 버튼을 누를 때마다 데이터가 지웠다 새로 씌여져야 합니다.</p>
+    <button onclick="showBookInfo()">업데이트</button>
+    <table>
+        <thead>
+        <tr>
+            <td>책 제목</td>
+            <td>작가명</td>
+        </tr>
+        </thead>
+        <tbody id="book-info">
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
