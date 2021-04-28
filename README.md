@@ -145,7 +145,7 @@
 
   <br><br>
 </details>
-<details open>
+<details>
 <summary><b>📒 나만의 one-page 쇼핑몰_02</b></summary><br>
 
 week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사용하여 아래 조건을 추가한다.<br>
@@ -157,10 +157,10 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 
 실습결과는 아래와 같다.<br>
 - 달러환산 금액 표현<br><br>
-<img src="image/happii_shop2.png">
+<p align=center><img src="image/happii_shop2.png" width="500"></p>
 
 - 사용자 주문 정보 미기입시 alert<br><br>
-<img src="image/shop_alert.PNG">
+<p align=center><img src="image/shop_alert.PNG" width="500"></p>
 </details>
 <details>
 <summary><b>📒 Ajax Practice</b></summary><br>
