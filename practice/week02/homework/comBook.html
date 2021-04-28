@@ -1,10 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>21세기 컴퓨터 주제 출판 책 보기</title>
+    <!-- JQuery를 import 합니다 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+        div.question-box {
+            color: white;
+            margin: 10px 0 20px 0;
+            background-image: url("https://p1.pxfuel.com/preview/62/205/156/technology-hands-agreement-ok-screen-computer.jpg");
+            background-position: center;
+        }
+
+        table {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('#book-info').empty();
+        });
+
+        function showBookInfo() {
+            $('#book-info').empty();
+            $.ajax({
+                type: "GET",
+                url: "https://openlibrary.org/subjects/computer.json?published_in=2000-2020",
+                data: {},
+                success: function (response) {
+                    let works = response['works']
+                    for (let i = 0; works.length; i++) {
+                        let title = works[i]['title'];
+                        let author = works[i]['authors'][0]['name'];
+
+                        let grid = `<tr>
+                                <td>${title}</td>
+                                <td>${author}</td>
+                              </tr>`;
+
+                        $('#book-info').append(grid);
+
+                    }
+                }
+            })
+        }
+    </script>
+
 </head>
 <body>
+<h1>Javascript + jQuery + Ajax 연습하기</h1>
+
+<hr/>
+
+<div class="question-box">
+    <h2>21세기 컴퓨터 주제 출판 책 보기</h2>
+    <p>모든 책의 제목(title),작가 이름(authors)을 화면에 보여주세요</p>
+    <p>업데이트 버튼을 누를 때마다 데이터가 지웠다 새로 씌여져야 합니다.</p>
+    <button onclick="showBookInfo()">업데이트</button>
+    <table>
+        <thead>
+        <tr>
+            <td>책 제목</td>
+            <td>작가명</td>
+        </tr>
+        </thead>
+        <!--  tbody 에 정보를 업데이트 하려면 어떻게 해야할까요? 힌트! 가리킨다(select)      -->
+        <tbody id = "book-info">
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>
