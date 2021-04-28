@@ -45,7 +45,7 @@
   <p align = center><img src = "image/bootstrap.PNG" alt="로그인" ><p><br><br>
 </details>
 <details open>
-<summary>📒 나만의 one-page 쇼핑몰_01</summary><br>
+<summary><b>📒 나만의 one-page 쇼핑몰_01</b></summary><br>
 임의의 상품을 판매하는 페이지를 만들어 보았다. 버튼에 대한 반응은 따로 처리하지 않았다.<br>
 
 ><a href ="https://github.com/bbjoite09/SeriesD/blob/master/practice/week01/product.html">practice/week01/product.html</a>
@@ -161,4 +161,20 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 
 - 사용자 주문 정보 미기입시 alert<br><br>
 <img src="image/shop_alert.PNG">
+</details>
+<details open>
+<summary><b>📒 Ajax Practice</b></summary><br>
+
+- <a href="https://openlibrary.org/subjects/love.json?published_in=1900-2000"> 책 API</a>를 활용하여 사랑에 관한 책 리스트를 출력한다.
+
+  > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/homework/loveBook.html">practice/week02/homework/loveBook.html</a>
+
+- <a href="https://openlibrary.org/dev/docs/api/subjects "> 책 API</a>를 활용하여 컴퓨터 주제 책에 대한 내용을 출력한다.
+
+  > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/homework/comBook.html">practice/week02/homework/comBook.html</a>
+
+- <a href="https://openlibrary.org/dev/docs/api/subjects "> 랜덤 숫자 의미부여 API</a>를 이용하여 입력한 숫자에 대한 의미를 출력한다.
+
+  > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/homework/numMean.html">practice/week02/homework/numMean.html</a>
+</details>
 
