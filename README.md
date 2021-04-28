@@ -175,6 +175,6 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 
 - <a href="https://openlibrary.org/dev/docs/api/subjects "> 랜덤 숫자 의미부여 API</a>를 이용하여 입력한 숫자에 대한 의미를 출력한다.
 
-  > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/homework/numMean.html">practice/week02/homework/numMean.html</a>
+  > <a href="http://numbersapi.com/">practice/week02/homework/numMean.html</a>
 </details>
 
