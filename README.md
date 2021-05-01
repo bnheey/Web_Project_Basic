@@ -4,7 +4,6 @@
 🖌 청년공간 이룸 - SeriesD Developer 과정<br> 
 🖌 각 Week 카테고리는 수업 및 과제로 구성되어 있으며, 과제는 📒 에서 확인할 수 있다.<br><br>
 
----
 
 ## 🎟 사용기술
 
@@ -16,7 +15,6 @@
     - jest
     - jQuery
     
----
 
 ## 🖼 Week01
 
@@ -195,8 +193,6 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 
   > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/homework/numMean.html">practice/week02/homework/numMean.html</a>
 </details><br>
-
----
 
 ## 🎞 run test
 ```shell
