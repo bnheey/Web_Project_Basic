@@ -40,6 +40,9 @@
         }
     </style>
     <script>
+        $(document).readt(function (){
+            console.log('페이지 로딩 완료')
+        })
         function openClose() {
             // id 값 post-box의 display 값이 block 이면(= 눈에 보이면)
             if ($("#post-box").css("display") == "block") {
