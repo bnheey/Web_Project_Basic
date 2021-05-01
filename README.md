@@ -2,7 +2,17 @@
 🖌 2021.04.17 - 2021.06.19<br>
 🖌 청년공간 이룸 - SeriesD Developer 과정<br> 
 🖌 각 Week 카테고리는 수업 및 과제로 구성되어 있으며, 과제는 📒 에서 확인할 수 있다.<br><br>
-
+---
+## 🎟 사용기술
+1. HTML
+2. CSS
+   - bootstrap
+3. JS
+    - node.js
+    - jest
+    - jQuery
+    
+---
 ## 🖼 Week01
 
 <details>
@@ -107,7 +117,8 @@
     서버는 클라이언트에게 Response 한다. HTTP 통신 프로토콜에서는 Response status code로 응답의 상태를 표현하는데, 응답은 5가지 그룹으로 나뉜다. 대표적으로 정상 응답(200 OK), 클라이언트 에러(404 not found), 서버 에러(500 Internal Server Error)가 있다.
 
 <br>
-<실습><br>
+
+< 실습 >
   
 1. 서울시 OpenAPI(<a href="http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99">실시간 미세먼지 상태</a>)를 이용하여 미세먼지 수치(PM10)가 25㎍/㎥ 이상인 관측소(MSRSTE_NM)를 빨강색으로 표시해준다.
 
@@ -116,8 +127,7 @@
 2. 일반 API(<a href="https://api.thecatapi.com/v1/images/search">고양이 사진</a> API)를 활용하여 랜덤으로 고양이 이미지를 출력해준다.
 
     ><a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/randomCat.html">practice/week02/randomCat.html</a>
-
-  <br>
+   
 </details>
 <details open>
   <summary><b>📒 Javascript and jQuery Practice</b></summary><br>
@@ -179,5 +189,10 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 - <a href="http://numbersapi.com/"> 랜덤 숫자 의미부여 API</a>를 이용하여 입력한 숫자에 대한 의미를 출력한다.
 
   > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/homework/numMean.html">practice/week02/homework/numMean.html</a>
-</details>
+</details><br>
 
+---
+## 🎞 run test
+```shell
+$ npm test
+```
