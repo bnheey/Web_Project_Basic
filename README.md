@@ -12,9 +12,11 @@
   
   1. HTML
   2.  CSS
-   - bootstrap
+  
+    - bootstrap
   
   3. JS
+ 
     - node.js
     - jest
     - jQuery
