@@ -6,22 +6,30 @@
 
 
 ## 🎟 사용 기술
+
 <details>
   <summary><b>Front-end</b></summary><br>
-1. HTML
-2. CSS
+  
+  1. HTML
+  2.  CSS
    - bootstrap
-3. JS
+  
+  3. JS
     - node.js
     - jest
     - jQuery
 </details>
+
 <details>
   <summary><b>Back-end</b></summary><br>
-4. python 
+  
+1. python 
     - requests
     - beautifulSoup
+
 </details>
+
+
 ## 🖼 Week01
 
 <details>
