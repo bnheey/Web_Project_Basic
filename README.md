@@ -6,7 +6,8 @@
 
 
 ## 🎟 사용 기술
-
+<details>
+  <summary><b>Front-end</b></summary><br>
 1. HTML
 2. CSS
    - bootstrap
@@ -14,11 +15,13 @@
     - node.js
     - jest
     - jQuery
-   
+</details>
+<details>
+  <summary><b>Back-end</b></summary><br>
 4. python 
     - requests
     - beautifulSoup
-
+</details>
 ## 🖼 Week01
 
 <details>
@@ -196,6 +199,20 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 
   > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/homework/numMean.html">practice/week02/homework/numMean.html</a>
 </details><br>
+
+## 🖼 Week03
+<details>
+  <summary><b>3.1 git</b></summary><br>
+</details>
+<details>
+  <summary><b>3.2 scrapping</b></summary><br>
+</details>
+<details>
+  <summary><b>3.3 crawling</b></summary><br>
+</details>
+
+
+
 
 ## 🎞 run test
 ```shell
