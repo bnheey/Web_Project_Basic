@@ -25,7 +25,8 @@
 <details>
   <summary><b>Back-end</b></summary><br>
   
-1. python 
+  1. python 
+  
     - requests
     - beautifulSoup
 
