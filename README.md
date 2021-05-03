@@ -9,14 +9,14 @@
 
 <details>
   <summary><b>Front-end</b></summary><br>
-  
+
   1. HTML
   2.  CSS
   
     - bootstrap
   
   3. JS
- 
+
     - node.js
     - jest
     - jQuery
@@ -149,7 +149,7 @@
     ><a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/randomCat.html">practice/week02/randomCat.html</a>
    
 </details>
-<details open>
+<details>
   <summary><b>📒 Javascript and jQuery Practice</b></summary><br>
   1. Javascript
   
@@ -177,7 +177,7 @@
 
   <br><br>
 </details>
-<details open>
+<details>
 <summary><b>📒 나만의 one-page 쇼핑몰_02</b></summary><br>
 
 ><a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/product.html">practice/week02/homework/product.html</a>
@@ -195,7 +195,7 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 - 사용자 주문 정보 미기입시 alert<br><br>
 <p align=center><img src="image/shop_alert.PNG" width="500"></p>
 </details>
-<details open>
+<details>
 <summary><b>📒 Ajax Practice</b></summary><br>
 
 - <a href="https://openlibrary.org/subjects/love.json?published_in=1900-2000"> 책 API</a>를 활용하여 사랑에 관한 책 리스트를 출력한다.
