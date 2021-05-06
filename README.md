@@ -212,14 +212,23 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 </details><br>
 
 ## 🖼 Week03
-<details>
-  <summary><b>3.1 git</b></summary><br>
+<details open>
+  <summary><b>3.1 Review</b></summary>
+    
+  > <a href = "">practice/week03/memo.html</a>
+    
+  week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정보를 제공하는 API를 추가한다.<br>
+  즉, 저장된 '아티클 불러오기' 기능이 추가되도록 구현해본다.
+    
 </details>
 <details>
-  <summary><b>3.2 scrapping</b></summary><br>
+  <summary><b>3.2 git</b></summary><br>
 </details>
 <details>
-  <summary><b>3.3 crawling</b></summary><br>
+  <summary><b>3.3 scrapping</b></summary><br>
+</details>
+<details>
+  <summary><b>3.4 crawling</b></summary><br>
 </details>
 
 
