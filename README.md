@@ -212,7 +212,7 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 </details><br>
 
 ## 🖼 Week03
-<details open>
+<details>
   <summary><b>3.1 Review</b></summary>
     
   > <a href = "">practice/week03/memo.html</a>
