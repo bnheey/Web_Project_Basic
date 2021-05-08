@@ -53,15 +53,26 @@ db = client.get_database('test')
 
 # CRUD
 
-
-
 # 아래와 같이 하면 도큐먼트가 바로 나오지 않음
 # 도큐먼트가 바로 나오지 않음
 # <pymongo.cursor.Cursor object at 0x000001E66BDB8190>
 # 지연된 평가
 # 만약 movies_documents 선언하고 한참 나중에 사용한다면?
 # print(movies_documents)
+movies_documents = db.movies.find(
+    # 검색 조건
+    # $lte(less than or equals) : 이하
+    # $gte : 이상
+    # $in : 포함하는 튜플을 출력
+    {},
+    {'_id': False},  # 데이터 표현 방법 -> id 값은 필요 없으니 빼고 가져온다.
+)
 
-movies = list(movies_documents) # 바로 DB 접속해서 가져오도록 list() 사용
+movies = list(movies_documents)  # 바로 DB 접속해서 가져오도록 list() 사용
 print(movies)
 
+# 업데이트
+db.movies.update_many(
+    {'title': '그린북'},
+    {'$set': {'point': 10}}
+)
