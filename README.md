@@ -238,3 +238,13 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 ```shell
 $ npm test
 ```
+
+## 🎞 URL
+```shell
+https://www.naver.com:80/blog?query=뉴스
+```
+* : 80 - 포트 (컴퓨터 내 어떤 프로그램과 통신할 것인가)
+* 0 ~ 65535번 포트까지 가능
+* 0 ~ 1024번 포트는 국제 표준, OS에서 사용
+* MongoDB는 기본으로 27017번 포트를 점유하도록 설정
+

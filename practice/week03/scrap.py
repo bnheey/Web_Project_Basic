@@ -1,6 +1,8 @@
 import requests
 import pprint
 import secret
+import urllib.request
+import sys
 
 # HTTP GET request
 import secret
@@ -29,9 +31,25 @@ headers = {
     'X-Naver-Client-Secret': secret.client_secret,
 }
 
+
 response = requests.get(
     naver_url,
-    headers = headers,
+    headers=headers,
 )
 
+
 pprint.pprint(response.json())
+
+text = "안녕하세요"
+
+data = {'text': text,
+        'source': 'ko',
+        'target': 'en'}
+
+url = "https://openapi.naver.com/v1/papago/n2mt"
+
+response = requests.post(url, headers=headers, data=data)
+
+send_data = response.json()
+print(send_data['message']['result']['translatedText'])
+
