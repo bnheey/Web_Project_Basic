@@ -61,10 +61,10 @@ db = client.get_database('test')
 # print(movies_documents)
 movies_documents = db.movies.find(
     # 검색 조건
-    # $lte(less than or equals) : 이하
-    # $gte : 이상
-    # $in : 포함하는 튜플을 출력
-    {},
+    # $lte(less than or equals) : 이하 {'rank': {'$lte': 10}}
+    # $gte : 이상 {'rank': {'$gte': 10}}
+    # $in : 포함하는 튜플을 출력 {'rank': {'$in': [1, 10]}}
+    {'rank': {'$in': [1, 10]}},
     {'_id': False},  # 데이터 표현 방법 -> id 값은 필요 없으니 빼고 가져온다.
 )
 
