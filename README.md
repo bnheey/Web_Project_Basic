@@ -223,9 +223,21 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 </details>
 <details>
   <summary><b>3.2 git</b></summary><br>
+    gitflow에 대하여 학습하였다. 첫번째로 git branch 생성 및 확인, branch 교체는 아래와 같다.
+    
+```shell
+$ git flow init
+$ git flow feature start homework
+
+# 현재 브랜치 확인
+$ git branch
+
+# 브랜치 교체(checkout)
+$ git checkout -b branch_name
+ ```
 </details>
 <details>
-  <summary><b>3.3 scrapping</b></summary><br>
+  <summary><b>3.3 scrapping</b></summary>
 </details>
 <details>
   <summary><b>3.4 crawling</b></summary><br>
