@@ -121,7 +121,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       ```
       <br>
-      week01에서 진행하였던 memo.html에 jQuery를 사용하여 "포스팅박스 열기" 버튼에 대한 반응을 추가했다. 해당 실습에 대한 내용은 <a href = "https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/memo.html">여기</a>에서 확인할 수 있다.
+      week01에서 진행하였던 memo.html에 jQuery를 사용하여 "포스팅박스 열기" 버튼에 대한 반응을 추가했다. 해당 실습에 대한 내용은 <a href = "https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/memo.html">여기</a>에서 확인할 수 있다.<br>
 
 </details>
 <details>
@@ -193,7 +193,7 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 <p align=center><img src="image/happii_shop2.png" width="500"></p>
 
 - 사용자 주문 정보 미기입시 alert<br><br>
-<p align=center><img src="image/shop_alert.PNG" width="500"></p>
+<p align=center><img src="image/shop_alert.PNG" width="500"></p> <br>
 </details>
 <details>
 <summary><b>📒 Ajax Practice</b></summary><br>
@@ -209,6 +209,7 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 - <a href="http://numbersapi.com/"> 랜덤 숫자 의미부여 API</a>를 이용하여 입력한 숫자에 대한 의미를 출력한다.
 
   > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week02/homework/numMean.html">practice/week02/homework/numMean.html</a>
+  
 </details><br>
 
 ## 🖼 Week03
@@ -218,13 +219,14 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
   > <a href = "">practice/week03/memo.html</a>
     
   week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정보를 제공하는 API를 추가한다.<br>
-  즉, 저장된 '아티클 불러오기' 기능이 추가되도록 구현해본다.
+  즉, 저장된 '아티클 불러오기' 기능이 추가되도록 구현해본다.<br>
     
 </details>
 <details>
   <summary><b>3.2 git</b></summary><br>
     원격 저장소 github에 대하여 학습하였다. 기본적으로 branch 생성 및 확인, 교체하는 방법은 아래와 같다.<br>
-    
+    <br>
+
 ```shell
 $ git flow init
 $ git flow feature start homework
@@ -235,7 +237,7 @@ $ git branch
 # 브랜치 교체(checkout)
 $ git checkout -b branch_name
  ```
-
+<br>
 git flow는 메인 브랜치(master, develop)와 보조 브랜치(feature, release, hotfix)로 구성된다.
 
 - master : 제품으로 출시될 수 있는 최종 산출물을 담는 브랜치
@@ -246,7 +248,7 @@ git flow는 메인 브랜치(master, develop)와 보조 브랜치(feature, relea
 
 즉, 새로운 기능을 탑재하기 위해 develop branch에서 feature branch를 생성한다. 이후 기능 개발이 완료되면 feature branch를 develop 브랜치로 merge한다. merge된 develop 브랜치의 품질검사를 위해 release 브랜치를 생성하고, 여기서 오류 사항을 수정한다. 최종적으로 release 브랜치를 master, develop 브랜치와 merge하여 배포를 준비한다.
 
-이번 시간에는 git flow의 흐름을 살펴보고 직접 브랜치를 다뤄보는 실습을 진행하였다.
+이번 시간에는 git flow의 흐름을 살펴보고 직접 브랜치를 다뤄보는 실습을 진행하였다.<br>
 </details>
 
 <details>
@@ -304,7 +306,7 @@ git flow는 메인 브랜치(master, develop)와 보조 브랜치(feature, relea
        ```
     
     3. 네이버 papago API를 이용한 번역기 프로그램
-    <br> 바로 위에서 진행한 <code>2. 네이버 책 검색 API를 이용하여 책 정보를 출력하기</code> 실습과 유사한 방법으로 간단한 한-영 번역기를 만들기 실습을 진행 해본다.
+    <br> 바로 위에서 진행한 <code>2. 네이버 책 검색 API를 이용하여 책 정보를 출력하기</code> 실습과 유사한 방법으로 간단한 한-영 번역기를 만들기 실습을 진행 해본다.<br>
 
 </details>
 <details>
