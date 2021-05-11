@@ -262,8 +262,7 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
     - feature : 기능을 개발하는 브랜치(feature/mongoDB, feature/python등을 생성해 실습해보았다.)
     - release : QA 브랜치. master에 merge하기 전에 품질검사를 진행함.
     - hotfix : master에서 오류가 생긴 경우 사용하는 branch
-
-      <br>
+    
   즉, 새로운 기능을 탑재하기 위해 develop branch에서 feature branch를 생성한다. 이후 기능 개발이 완료되면 feature branch를 develop 브랜치로 merge한다. merge된
   develop 브랜치의 품질검사를 위해 release 브랜치를 생성하고, 여기서 오류 사항을 수정한다. 최종적으로 release 브랜치를 master, develop 브랜치와 merge하여 배포를 준비한다.
 
