@@ -86,7 +86,7 @@
 
 <p align = center><img src = "image/happii_shop.PNG" alt="로그인"><p>
 <br>
-</details>
+</details><br>
 
 
 ## 🖼 Week02
@@ -223,7 +223,7 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 </details>
 <details>
   <summary><b>3.2 git</b></summary><br>
-    원격 저장소 github에 대하여 학습하였다. 기본적으로 branch 생성 및 확인, 교체하는 방법은 아래와 같다.
+    원격 저장소 github에 대하여 학습하였다. 기본적으로 branch 생성 및 확인, 교체하는 방법은 아래와 같다.<br>
     
 ```shell
 $ git flow init
@@ -254,10 +254,7 @@ git flow는 메인 브랜치(master, develop)와 보조 브랜치(feature, relea
 </details>
 <details>
   <summary><b>3.4 crawling</b></summary><br>
-</details>
-
-
-
+</details><br>
 
 ## 🎞 run test
 ```shell
