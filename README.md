@@ -223,7 +223,7 @@ week01의 과제 "나만의 one-page 쇼핑몰_01"에 Javascript와 Ajax를 사�
 </details>
 <details>
   <summary><b>3.2 git</b></summary><br>
-    gitflow에 대하여 학습하였다. 첫번째로 git branch 생성 및 확인, branch 교체는 아래와 같다.
+    원격 저장소 github에 대하여 학습하였다. 기본적으로 branch 생성 및 확인, 교체하는 방법은 아래와 같다.
     
 ```shell
 $ git flow init
@@ -235,7 +235,20 @@ $ git branch
 # 브랜치 교체(checkout)
 $ git checkout -b branch_name
  ```
+
+git flow는 메인 브랜치(master, develop)와 보조 브랜치(feature, release, hotfix)로 구성된다.
+
+- master : 제품으로 출시될 수 있는 최종 산출물을 담는 브랜치
+- develop : 개발자들 브랜치. 각 개발 내용을 develop 브랜치에 merge함.
+- feature : 기능을 개발하는 브랜치(feature/mongoDB, feature/python등을 생성해 실습해보았다.)
+- release : QA 브랜치. master에 merge하기 전에 품질검사를 진행함.
+- hotfix : master에서 오류가 생긴 경우 사용하는 branch
+
+즉, 새로운 기능을 탑재하기 위해 develop branch에서 feature branch를 생성한다. 이후 기능 개발이 완료되면 feature branch를 develop 브랜치로 merge한다. merge된 develop 브랜치의 품질검사를 위해 release 브랜치를 생성하고, 여기서 오류 사항을 수정한다. 최종적으로 release 브랜치를 master, develop 브랜치와 merge하여 배포를 준비한다.
+
+이번 시간에는 git flow의 흐름을 살펴보고 직접 브랜치를 다뤄보는 실습을 진행하였다.
 </details>
+
 <details>
   <summary><b>3.3 scrapping</b></summary>
 </details>
