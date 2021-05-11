@@ -30,7 +30,7 @@
     - requests
     - beautifulSoup
 
-</details>
+</details><br>
 
 
 ## 🖼 Week01
@@ -251,6 +251,61 @@ git flow는 메인 브랜치(master, develop)와 보조 브랜치(feature, relea
 
 <details>
   <summary><b>3.3 scrapping</b></summary>
+
+- Virture Environment setting<br>
+<br> 가상환경(Virture environments)은 한 시스템에 대하여 여러 python 환경이 구축 가능하도록 하는 실행 환경을 말한다. 이때 우리는 가상환경을 통해 자신이 필요한 모듈만 설치하여 사용 가능하다. (버전 충돌 등의 이유로 별개의 가상 환경을 구축할 필요가 있으며, 이는 즉 독립적으로 사용 가능하다.)
+   
+        - seriesD/venv에 가상환경을 설정하였다.
+        - project interpreter에서 requests, beautifulSoup4를 설치하였다.
+
+- requests 라이브러리, API를 이용한 scraping 실습
+<br><br>
+    <a href = "https://developers.naver.com/main/">Naver developer</a> 가입 후 "Open API 이용 신청"을 진행한다. (이때 사용 API 에는 검색, papago 번역을 추가하였다.)
+    <br> 이후 내 어플리케이션 정보에서 Client ID와 Client Secret을 확인할 수 있다. 이는 복사하여 secret.py 파일에 변수로 따로 저장한다. Client ID와 Client Secret는 유출되면 안되는 개인 정보이기 때문에 github에 업로드 되지 않도록 .gitignore 에서 사전에 반드시 처리해주어야한다. 
+   
+    <br> 위의 절차를 완료하였다면 책 검색 API와 파파고 API를 사용할 수 있게 된다.
+    <br><br>
+    < 실습 >
+    
+    > <a href = "https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/scrap.py">practice/week03/scrap.py</a>
+  
+    1. 서울시 권역별 실시간 대기환경 현황 API를 이용한 미세먼지 25 이상 지역 " 이름, 미세먼지 수치" 출력 프로그램
+        ```python
+        # requests를 사용하여 서버에 요청하는 방법은 아래와 같다.
+        import requests
+       
+        response = requests.get(
+            'http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99'
+        )
+       
+       # 요청에 대한 응답(json)을 result에 저장한다.
+       result = response.json()
+       
+       # 이후 서버에서 받은 데이터에 대한 원하는 처리를 진행한다.
+        ```
+    2. 네이버 책 검색 API를 이용하여 책 정보 출력 프로그램
+        ```python
+        import requests
+        import secret   # secret에 클라이언트 정보 저장
+       
+       # 네이버 API는 따로 Client ID, Client Secret 정보가 필요하기 때문에 headers를 이용하여 정보를 담는다.
+        headers = {
+            'X-Naver-Client-Id': secret.client_id,
+            'X-Naver-Client-Secret': secret.client_secret,
+        }
+       
+        book_name = input()
+        naver_url = f'https://openapi.naver.com/v1/search/book.json?query={book_name}'
+        
+        response = requests.get(
+            naver_url,
+            headers=headers,
+        )
+       ```
+    
+    3. 네이버 papago API를 이용한 번역기 프로그램
+    <br> 바로 위에서 진행한 <code>2. 네이버 책 검색 API를 이용하여 책 정보를 출력하기</code> 실습과 유사한 방법으로 간단한 한-영 번역기를 만들기 실습을 진행 해본다.
+
 </details>
 <details>
   <summary><b>3.4 crawling</b></summary><br>
