@@ -329,7 +329,7 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
     3. 네이버 papago API를 이용한 번역기 프로그램
        <br><code>2. 네이버 책 검색 API를 이용하여 책 정보를 출력하기</code> 실습과 유사한 방법으로 간단한 한-영 번역기를 만들기 실습을 진행 해본다.<br>
        <br> 실습 결과는 아래와 같다.
-       <p align = left><img src = "image/translator.PNG" alt="로그인"><p>
+       <p align = left><img src = "image/translator.PNG" alt="translator_result"><p>
 </details>
 <details>
   <summary><b>3.4 Web Scrapping(Crawling)</b></summary><br>
@@ -354,6 +354,29 @@ data = requests.get('https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&d
 soup = BeautifulSoup(data.text, 'html.parser')
 ```
 <br>
+</details>
+
+<details>
+  <summary><b>📒 genie music 순위 & 한국 프로야구 순위 크롤링</b></summary>
+    
+- genie music 순위 크롤링
+
+    > practice/week03/homework/genie.py
+  
+    <a href = "https://www.genie.co.kr/chart/top200?ditc=D&rtm=N&ymd=20210514">genie music 사이트</a>에서 <code>차트 순위, 제목, 가수 이름</code>을 크롤링 한다.
+    출력 결과는 아래와 같다.<br>
+  
+    <p align = left><img src = "image/genie.PNG" alt="genie_crawling"><p>
+  
+
+- 한국 프로야구 순위 크롤링
+
+    > practice/week03/homework/baseball.py
+  
+    <a href = "https://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo">한국 프로야구 순위 페이지</a>에서 승률이 0.5 이상인 프로야구 팀의 <code>현재 순위, 이름, 승률</code>을 크롤링 한다.
+    출력 결과는 아래와 같다.<br>
+  
+    <p align = left><img src = "image/baseball.PNG" alt="kbo_crawling"><p>
 </details><br>
 
 ## 🖼 Week04
