@@ -20,7 +20,7 @@ movies = soup.select('#old_content > table > tbody > tr')
 for movie in movies:
     # movie 안에 a 가 있으면,
     a_tag = movie.select_one('td.title > div > a')
-    if a_tag is not None:
+    if a_tag:
         rank = movie.select_one('td:nth-child(1) > img')['alt']  # img 태그의 alt 속성값을 가져오기
         title = a_tag.text  # a 태그 사이의 텍스트를 가져오기
         star = movie.select_one('td.point').text  # td 태그 사이의 텍스트를 가져오기
