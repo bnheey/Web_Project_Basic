@@ -329,7 +329,7 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
     3. 네이버 papago API를 이용한 번역기 프로그램
        <br><code>2. 네이버 책 검색 API를 이용하여 책 정보를 출력하기</code> 실습과 유사한 방법으로 간단한 한-영 번역기를 만들기 실습을 진행 해본다.<br>
        <br> 실습 결과는 아래와 같다.
-       <p align = center><img src = "image/translator.PNG" alt="로그인"><p>
+       <p align = left><img src = "image/translator.PNG" alt="로그인"><p>
 </details>
 <details>
   <summary><b>3.4 Web Scrapping(Crawling)</b></summary><br>
