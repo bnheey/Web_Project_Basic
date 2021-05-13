@@ -255,14 +255,13 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
 
 - gitflow 기초<br>
   git flow는 메인 브랜치(master, develop)와 보조 브랜치(feature, release, hotfix)로 구성된다.
-  <br><br>
 
     - master : 제품으로 출시될 수 있는 최종 산출물을 담는 브랜치
     - develop : 개발자들 브랜치. 각 개발 내용을 develop 브랜치에 merge함.
     - feature : 기능을 개발하는 브랜치(feature/mongoDB, feature/python등을 생성해 실습해보았다.)
     - release : QA 브랜치. master에 merge하기 전에 품질검사를 진행함.
     - hotfix : master에서 오류가 생긴 경우 사용하는 branch
-    
+
   즉, 새로운 기능을 탑재하기 위해 develop branch에서 feature branch를 생성한다. 이후 기능 개발이 완료되면 feature branch를 develop 브랜치로 merge한다. merge된
   develop 브랜치의 품질검사를 위해 release 브랜치를 생성하고, 여기서 오류 사항을 수정한다. 최종적으로 release 브랜치를 master, develop 브랜치와 merge하여 배포를 준비한다.
 
@@ -271,7 +270,7 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
 </details>
 
 <details>
-  <summary><b>3.3 scrapping</b></summary>
+  <summary><b>3.3 Requests</b></summary>
 
 - Virture Environment setting<br>
   <br> 가상환경(Virture environments)은 한 시스템에 대하여 여러 python 환경이 구축 가능하도록 하는 실행 환경을 말한다. 이때 우리는 가상환경을 통해 자신이 필요한 모듈만 설치하여 사용
@@ -328,12 +327,40 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
        ```
 
     3. 네이버 papago API를 이용한 번역기 프로그램
-       <br> 바로 위에서 진행한 <code>2. 네이버 책 검색 API를 이용하여 책 정보를 출력하기</code> 실습과 유사한 방법으로 간단한 한-영 번역기를 만들기 실습을 진행 해본다.<br>
-
+       <br><code>2. 네이버 책 검색 API를 이용하여 책 정보를 출력하기</code> 실습과 유사한 방법으로 간단한 한-영 번역기를 만들기 실습을 진행 해본다.<br>
+       <br> 실습 결과는 아래와 같다.
+       <p align = center><img src = "image/translator.PNG" alt="로그인"><p>
 </details>
 <details>
-  <summary><b>3.4 crawling</b></summary><br>
+  <summary><b>3.4 Web Scrapping(Crawling)</b></summary><br>
+    Web Scrapping이란, 웹페이지에서 자신이 원하는 정보를 수집하는 것을 말한다. 
+    <br>beautifulSoup4를 이용하여 HTML 코드를 쉽게 스크래핑 할 수 있다. 
+    <br><br>
+    < 실습 ><br>
+
+> <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/scrap.py"> practice/week03/crawling.py</a>
+
+아래 내용을 참고하여 <a href="https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20200716 ">네이버 영화 정보 사이트</a>
+    에서 <code>영화 순위, 제목, 평점</code>을 크롤링 해오는 프로젝트를 진행해본다.<br>
+    
+```python
+from bs4 import BeautifulSoup
+
+# 네이버 영화 정보 사이트를 읽어 HTML을 받아온다.
+headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
+data = requests.get('https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20200716',headers=headers)
+
+# 받아온 HTML을 파싱에 용이한 형태로 변경한다.
+soup = BeautifulSoup(data.text, 'html.parser')
+```
+<br>
 </details><br>
+
+## 🖼 Week04
+
+<details>
+  <summary><b>4.1</b></summary>
+</details>
 
 ## 🎞 run test
 
