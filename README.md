@@ -361,7 +361,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
     
 - genie music 순위 크롤링
 
-    > practice/week03/homework/genie.py
+    > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/homework/genie.py">practice/week03/homework/genie.py</a>
   
     <a href = "https://www.genie.co.kr/chart/top200?ditc=D&rtm=N&ymd=20210514">genie music 사이트</a>에서 <code>차트 순위, 제목, 가수 이름</code>을 크롤링 한다.
     출력 결과는 아래와 같다.<br>
@@ -371,7 +371,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 
 - 한국 프로야구 순위 크롤링
 
-    > practice/week03/homework/baseball.py
+    > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/homework/baseball.py">practice/week03/homework/baseball.py</a>
   
     <a href = "https://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo">한국 프로야구 순위 페이지</a>에서 승률이 0.5 이상인 프로야구 팀의 <code>현재 순위, 이름, 승률</code>을 크롤링 한다.
     출력 결과는 아래와 같다.<br>
@@ -382,8 +382,46 @@ soup = BeautifulSoup(data.text, 'html.parser')
 ## 🖼 Week04
 
 <details>
-  <summary><b>4.1</b></summary>
+  <summary><b>4.1 MongoDB</b></summary>
+    
+- 준비하기
+    
+    1. <a href = "http://localhost:27017/">localhost:27017</a>에서 아래의 메시지가 출력되는지 확인하여 mongoDB가 정상적으로 작동하고 있는지를 알아볼 수 있다.
+
+        ```shell
+        It looks like you are trying to access MongoDB over HTTP on the native driver port.
+        ```
+
+    2. robo3T를 사용하면 mongoDB만으로는 가시적으로 보지못하였던 DB내부 내용을 편리하게 확인할 수 있다. robo3T를 실행하고 create - connection 하여 setting한다.
+
+    3. pycharm에서 pymongo 패키지를 설치한다.
+  
+  
+- CRUD
+    
+  ```python
+  from pymongo import MongoClient
+
+  client = MongoClient
+  db = client.get_database('person')
+  
+  # Create
+  db.users.insert_one({'name' : '홍길동', 'age' : 27})
+  db.users.insert_one({'name' : '차태현', 'age' : 27})
+  db.users.insert_one({'name' : '아이유', 'age' : 29})
+  # Read
+  read1 = db.users.find_one({'name': '홍길동'}) # 하나
+  read2 = list(db.users.find({'age': 27}, {'_id': False})) # 여러 값
+  # Update
+  db.users.update_one({'name': '홍길동'}, {'$set': {'age': 20}}) # 하나
+  db.users.update_many({'age': 27}, { '$set': {'age': 70}}) # 여러 값
+  # Delete
+  db.users.delete_one({'name': '홍길동'})
+  ```
+    
 </details>
+
+
 
 ## 🎞 run test
 
