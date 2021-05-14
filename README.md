@@ -383,6 +383,12 @@ soup = BeautifulSoup(data.text, 'html.parser')
 
 <details>
   <summary><b>4.1 MongoDB</b></summary>
+
+> practice/week04/db_practice01.py
+
+> practice/week04/db_practice02.py
+
+> practice/week04/genie_db.py
     
 - 준비하기
     
@@ -409,16 +415,22 @@ soup = BeautifulSoup(data.text, 'html.parser')
   db.users.insert_one({'name' : '홍길동', 'age' : 27})
   db.users.insert_one({'name' : '차태현', 'age' : 27})
   db.users.insert_one({'name' : '아이유', 'age' : 29})
+  
   # Read
   read1 = db.users.find_one({'name': '홍길동'}) # 하나
   read2 = list(db.users.find({'age': 27}, {'_id': False})) # 여러 값
+  
   # Update
   db.users.update_one({'name': '홍길동'}, {'$set': {'age': 20}}) # 하나
   db.users.update_many({'age': 27}, { '$set': {'age': 70}}) # 여러 값
+  
   # Delete
   db.users.delete_one({'name': '홍길동'})
   ```
-    
+  <br>
+</details>
+<details>
+  <summary><b>4.2</b></summary>
 </details>
 
 
