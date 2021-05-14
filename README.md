@@ -382,7 +382,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 ## 🖼 Week04
 
 <details>
-  <summary><b>4.1 MongoDB</b></summary>
+  <summary><b>4.1 MongoDB</b></summary><br>
 
 > practice/week04/db_practice01.py
 
@@ -429,10 +429,103 @@ soup = BeautifulSoup(data.text, 'html.parser')
   ```
   <br>
 </details>
+
 <details>
-  <summary><b>4.2</b></summary>
+  <summary><b>4.2 Flask</b></summary>
+
+Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함으로써 서버를 구동할때 필요한 복잡한 과정을 간단하게 이용할 수 있다.
+
+- 준비하기
+
+    1. pycharm에서 flask 패키지를 설치한다.
+    2. Flask의 기본 폴더 구조는 아래와 같다.
+        
+        ```shell
+        - static 폴더 : 이미지, css파일
+        - templates 폴더 : html파일
+        - app.py 파일 : Flask 서버를 실행시키는 파일
+        ```
+       
+- app.py<br><br>
+    > practice/week04/app.py
+  
+    app.py에 아래 내용을 작성하고, chrome 에서 <a href="http://localhost:5000/">localhost:5000/</a>
+  에 접속하면 Hello World! 가 출력된 것을 확인할 수 있다. 필요에 따라 경로를 정하면 된다.
+  
+    ```python
+    from flask import Flask
+    
+    app = Flask(__name__)
+    
+    # @app.route로 경로를 설정할 수 있다.
+    # localhost:5000에서 경로'/'로 접속하면 hello_world() 함수가 실행된다.
+    @app.route('/')
+    def hello_world():
+        return 'Hello World!'
+    
+    if __name__ == '__main__':
+        app.run('0.0.0.0', port=5000, debug=True)
+    ```
+  <br>
+- API 만들기
+
+    app.py에서 API를 만들어 사용할 수 있다. 이때 API의 method는 GET, POST 등의 방식이 있다.
+    <br> API는 서버와 클라이언트 사이에서 정해진 형식으로 데이터를 주고받아야 한다.
+    정해진 정보를 구성하는 내용은 아래와 같다.
+  
+    ```shell
+    1. Client request 정보 : 요청 URL, 요청 방식 (GET / POST /...)
+    2. 서버가 제공할 기능 : Read, Create 등
+    3. Response 데이터  : 응답하는 데이터의 내용
+    ```
+  
+    1. GET 방식 API 생성
+      
+        ```python
+        from flask import Flask, render_template, jsonify, request
+      
+        # @app.route에 request method 추가로 기술(GET)
+        @app.route('/test', methods=['GET'])
+        def test_get():
+            title_receive = request.args.get('title_give')
+            print(title_receive)
+            return jsonify({'result': 'success', 'msg': '이 요청은 GET!'})
+        ```
+    
+    2. POST 방식 API 생성
+    
+        ```python
+        from flask import Flask, render_template, jsonify, request
+      
+        @app.route('/test', methods=['POST'])
+        def test_post():
+            title_receive = request.form['title_give']
+            print(title_receive)
+            return jsonify({'result': 'success', 'msg': '이 요청은 POST!'})
+        ```
+    <br>
+    생성한 API를 사용한 결과는 아래와 같다.
+    <p align="center"><img src="image/make_api.PNG"></p><br>
 </details>
 
+<details>
+  <summary><b>4.3 apply</b></summary>
+</details>
+
+## 🎞 Create New Project
+
+1. python 가상환경(venv) 만들기
+2. .gitignore 추가
+3. LICENSE 추가(플러그인 설치해서)
+4. README.md 추가
+5. git init(pycharm VCS에서 git 설정)
+6. git flow init
+7. 프로젝트 github 공유
+8. master, develop 브랜치 깃허브에 푸시되었는지 확인
+9. poetry init
+10. poetry add flask
+11. poetry add pymongo
+12. 커밋
 
 
 ## 🎞 run test
@@ -440,6 +533,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 ```shell
 $ npm test
 ```
+
 
 ## 🎞 URL
 
