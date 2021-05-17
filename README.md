@@ -535,8 +535,11 @@ Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함
     ```shell
     $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
     $ (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -
-
     
+    # poetry로 패키지를 추가하기
+    $ poetry add <패키지명>
+  
+    # poetry 사용하기
     $ poetry install
     ```
 
