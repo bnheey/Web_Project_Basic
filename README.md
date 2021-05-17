@@ -527,6 +527,18 @@ Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함
 11. poetry add pymongo
 12. 커밋
 
+* poetry
+
+    poetry를 사용하면 다른 컴퓨터에서 프로그램을 사용할 때 간편하게 환경을 세팅할 수 있다. <a href="https://python-poetry.org/docs/"> 여기 </a>
+    를 참고하여 poetry를 설치할 수 있다.
+
+    ```shell
+    $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+    $ (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -
+
+    
+    $ poetry install
+    ```
 
 ## 🎞 run test
 
