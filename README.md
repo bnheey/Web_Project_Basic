@@ -509,7 +509,7 @@ Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함
 </details>
 
 <details>
-  <summary><b>📒 모두의 책 리뷰</b></summary>
+  <summary><b>📒 모두의 책 리뷰</b></summary><br>
 
 > practice/bookreview
 
@@ -524,9 +524,10 @@ mongoDB, Flask를 활용하여 모두의 책리뷰 프로젝트를 진행한다.
 <p align = center><img src = "image/bookreview1.PNG" alt="kbo_crawling"><p>
 
 <p align = center><img src = "image/bookreview2.PNG" alt="kbo_crawling"><p>
-
+<br>
 </details>
 
+<br>
 ## 🎞 Create New Project
 
 1. python 가상환경(venv) 만들기
