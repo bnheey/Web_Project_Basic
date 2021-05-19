@@ -528,7 +528,10 @@ mongoDB, Flask를 활용하여 모두의 책리뷰 프로젝트를 진행한다.
 </details>
 
 <br>
+
 ## 🎞 Create New Project
+<details>
+  <summary><b>환경 세팅 절차</b></summary><br>
 
 1. python 가상환경(venv) 만들기
 2. .gitignore 추가
@@ -542,6 +545,9 @@ mongoDB, Flask를 활용하여 모두의 책리뷰 프로젝트를 진행한다.
 10. poetry add flask
 11. poetry add pymongo
 12. 커밋
+
+</details><br>
+
 
 * poetry
 
@@ -558,6 +564,7 @@ mongoDB, Flask를 활용하여 모두의 책리뷰 프로젝트를 진행한다.
     # poetry 사용하기
     $ poetry install
     ```
+<br>
 
 ## 🎞 run test
 
