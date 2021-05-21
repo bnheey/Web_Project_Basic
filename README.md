@@ -541,7 +541,7 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 ```
 
 실습 내용은 아래와 같다.
-<p align="center"><img src="practice/movieStar.JEPG"></p>
+<p align="center"><img src="practice/movieStar.JPG" alt="movieStar project example"></p>
 
 
 </details>
