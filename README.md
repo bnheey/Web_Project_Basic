@@ -521,7 +521,8 @@ Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함
 mongoDB, Flask를 활용하여 모두의 책리뷰 프로젝트를 진행한다.
 
 ```
-1. 제목, 저자, 리뷰를 저장한다. 이때 입력하지 않은 란이 있다면 alert()을 띄운다.(focus()를 사용하면 alert을 띄운 뒤 해당 란으로 커서를 이동시킬 수 있다.)
+1. 제목, 저자, 리뷰를 저장한다. 이때 입력하지 않은 란이 있다면 alert()을 띄운다
+   (focus()를 사용하면 alert을 띄운 뒤 해당 란으로 커서를 이동시킬 수 있다.)
 2. 모든란에 입력을 완료했다면, 아래의 책 리스트에 등록한다.
 ```
 
@@ -550,6 +551,17 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 
 </details>
 
+<br>
+
+## 🖼 Week05
+
+<details>
+  <summary><b>5.1 로그인 창 구현하기</b></summary><br>
+</details>
+
+<details>
+  <summary><b>5.2 네이버 아이디로 로그인 기능 추가하기 (네아로 API)</b></summary><br>
+</details>
 <br>
 
 ## 🎞 Create New Project
