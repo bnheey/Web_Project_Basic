@@ -540,6 +540,9 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 3. 삭제 버튼을 누르면 해당 이름을 가진 card를 삭제한다.
 ```
 
+실습 내용은 아래와 같다.
+<p align="center"><img src="practice/movieStar.JEPG"></p>
+
 
 </details>
 
