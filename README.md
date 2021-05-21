@@ -330,6 +330,7 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
        <br><code>2. 네이버 책 검색 API를 이용하여 책 정보를 출력하기</code> 실습과 유사한 방법으로 간단한 한-영 번역기를 만들기 실습을 진행 해본다.<br>
        <br> 실습 결과는 아래와 같다.
        <p align = left><img src = "image/translator.PNG" alt="translator_result"><p>
+
 </details>
 <details>
   <summary><b>3.4 Web Scrapping(Crawling)</b></summary><br>
@@ -341,42 +342,45 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
 > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/scrap.py"> practice/week03/crawling.py</a>
 
 아래 내용을 참고하여 <a href="https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20200716 ">네이버 영화 정보 사이트</a>
-    에서 <code>영화 순위, 제목, 평점</code>을 크롤링 해오는 프로젝트를 진행해본다.<br>
-    
+에서 <code>영화 순위, 제목, 평점</code>을 크롤링 해오는 프로젝트를 진행해본다.<br>
+
 ```python
 from bs4 import BeautifulSoup
 
 # 네이버 영화 정보 사이트를 읽어 HTML을 받아온다.
-headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
-data = requests.get('https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20200716',headers=headers)
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
+data = requests.get('https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20200716', headers=headers)
 
 # 받아온 HTML을 파싱에 용이한 형태로 변경한다.
 soup = BeautifulSoup(data.text, 'html.parser')
 ```
+
 <br>
 </details>
 
 <details>
   <summary><b>📒 genie music 순위 & 한국 프로야구 순위 크롤링</b></summary>
-    
+
 - genie music 순위 크롤링
 
-    > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/homework/genie.py">practice/week03/homework/genie.py</a>
-  
-    <a href = "https://www.genie.co.kr/chart/top200?ditc=D&rtm=N&ymd=20210514">genie music 사이트</a>에서 <code>차트 순위, 제목, 가수 이름</code>을 크롤링 한다.
-    출력 결과는 아래와 같다.<br>
-  
+  > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/homework/genie.py">practice/week03/homework/genie.py</a>
+
+  <a href = "https://www.genie.co.kr/chart/top200?ditc=D&rtm=N&ymd=20210514">genie music 사이트</a>에서 <code>차트 순위, 제목, 가수
+  이름</code>을 크롤링 한다. 출력 결과는 아래와 같다.<br>
+
     <p align = left><img src = "image/genie.PNG" alt="genie_crawling"><p>
-  
+
 
 - 한국 프로야구 순위 크롤링
 
-    > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/homework/baseball.py">practice/week03/homework/baseball.py</a>
-  
-    <a href = "https://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo">한국 프로야구 순위 페이지</a>에서 승률이 0.5 이상인 프로야구 팀의 <code>현재 순위, 이름, 승률</code>을 크롤링 한다.
-    출력 결과는 아래와 같다.<br>
-  
+  > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/homework/baseball.py">practice/week03/homework/baseball.py</a>
+
+  <a href = "https://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo">한국 프로야구 순위 페이지</a>에서 승률이 0.5 이상인
+  프로야구 팀의 <code>현재 순위, 이름, 승률</code>을 크롤링 한다. 출력 결과는 아래와 같다.<br>
+
     <p align = left><img src = "image/baseball.PNG" alt="kbo_crawling"><p>
+
 </details><br>
 
 ## 🖼 Week04
@@ -389,9 +393,9 @@ soup = BeautifulSoup(data.text, 'html.parser')
 > practice/week04/db_practice02.py
 
 > practice/week04/genie_db.py
-    
+
 - 준비하기
-    
+
     1. <a href = "http://localhost:27017/">localhost:27017</a>에서 아래의 메시지가 출력되는지 확인하여 mongoDB가 정상적으로 작동하고 있는지를 알아볼 수 있다.
 
         ```shell
@@ -401,10 +405,10 @@ soup = BeautifulSoup(data.text, 'html.parser')
     2. robo3T를 사용하면 mongoDB만으로는 가시적으로 보지못하였던 DB내부 내용을 편리하게 확인할 수 있다. robo3T를 실행하고 create - connection 하여 setting한다.
 
     3. pycharm에서 pymongo 패키지를 설치한다.
-  
-  
+
+
 - CRUD
-    
+
   ```python
   from pymongo import MongoClient
 
@@ -428,6 +432,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
   db.users.delete_one({'name': '홍길동'})
   ```
   <br>
+
 </details>
 
 <details>
@@ -439,19 +444,19 @@ Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함
 
     1. pycharm에서 flask 패키지를 설치한다.
     2. Flask의 기본 폴더 구조는 아래와 같다.
-        
+
         ```shell
         - static 폴더 : 이미지, css파일
         - templates 폴더 : html파일
         - app.py 파일 : Flask 서버를 실행시키는 파일
         ```
-       
+
 - app.py<br><br>
-    > practice/week04/app.py
-  
-    app.py에 아래 내용을 작성하고, chrome 에서 <a href="http://localhost:5000/">localhost:5000/</a>
+  > practice/week04/app.py
+
+  app.py에 아래 내용을 작성하고, chrome 에서 <a href="http://localhost:5000/">localhost:5000/</a>
   에 접속하면 Hello World! 가 출력된 것을 확인할 수 있다. 필요에 따라 경로를 정하면 된다.
-  
+
     ```python
     from flask import Flask
     
@@ -469,18 +474,17 @@ Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함
   <br>
 - API 만들기
 
-    app.py에서 API를 만들어 사용할 수 있다. 이때 API의 method는 GET, POST 등의 방식이 있다.
-    <br> API는 서버와 클라이언트 사이에서 정해진 형식으로 데이터를 주고받아야 한다.
-    정해진 정보를 구성하는 내용은 아래와 같다.
-  
+  app.py에서 API를 만들어 사용할 수 있다. 이때 API의 method는 GET, POST 등의 방식이 있다.
+  <br> API는 서버와 클라이언트 사이에서 정해진 형식으로 데이터를 주고받아야 한다. 정해진 정보를 구성하는 내용은 아래와 같다.
+
     ```shell
     1. Client request 정보 : 요청 URL, 요청 방식 (GET / POST /...)
     2. 서버가 제공할 기능 : Read, Create 등
     3. Response 데이터  : 응답하는 데이터의 내용
     ```
-  
+
     1. GET 방식 API 생성
-      
+
         ```python
         from flask import Flask, render_template, jsonify, request
       
@@ -491,9 +495,9 @@ Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함
             print(title_receive)
             return jsonify({'result': 'success', 'msg': '이 요청은 GET!'})
         ```
-    
+
     2. POST 방식 API 생성
-    
+
         ```python
         from flask import Flask, render_template, jsonify, request
       
@@ -506,6 +510,7 @@ Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함
     <br>
     생성한 API를 사용한 결과는 아래와 같다.
     <p align="center"><img src="image/make_api.PNG"></p><br>
+
 </details>
 
 <details>
@@ -521,9 +526,9 @@ mongoDB, Flask를 활용하여 모두의 책리뷰 프로젝트를 진행한다.
 ```
 
 실습 내용은 아래와 같다.
-<p align = center><img src = "image/bookreview1.PNG" alt="kbo_crawling"><p>
+<p align = center><img src = "image/bookreview1.PNG" alt="kbo_crawling"></p>
 
-<p align = center><img src = "image/bookreview2.PNG" alt="kbo_crawling"><p>
+<p align = center><img src = "image/bookreview2.PNG" alt="kbo_crawling"></p>
 <br>
 </details>
 <details>
@@ -533,7 +538,6 @@ mongoDB, Flask를 활용하여 모두의 책리뷰 프로젝트를 진행한다.
 
 mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 
-
 ``` shell
 1. DB의 영화인 리스트를 read하여 card로 화면에 보여준다.
 2. 좋아요 버튼을 누르면 좋아요 수가 증가하고, 화면의 card는 좋아요가 많은 순서로 정렬된다.
@@ -541,7 +545,7 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 ```
 
 실습 내용은 아래와 같다.
-<p align="center"><img src="practice/moviestar.JPG" alt="movieStar project example"></p>
+<p align=center><img src="image/moviestar.JPG" alt="movieStar project example"></p>
 
 
 </details>
@@ -549,6 +553,7 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 <br>
 
 ## 🎞 Create New Project
+
 <details>
   <summary><b>환경 세팅 절차</b></summary><br>
 
@@ -567,11 +572,10 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 
 </details><br>
 
-
 * poetry
 
-    poetry를 사용하면 다른 컴퓨터에서 프로그램을 사용할 때 간편하게 환경을 세팅할 수 있다. <a href="https://python-poetry.org/docs/"> 여기 </a>
-    를 참고하여 poetry를 설치할 수 있다.
+  poetry를 사용하면 다른 컴퓨터에서 프로그램을 사용할 때 간편하게 환경을 세팅할 수 있다. <a href="https://python-poetry.org/docs/"> 여기 </a>
+  를 참고하여 poetry를 설치할 수 있다.
 
     ```shell
     $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
@@ -583,6 +587,7 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
     # poetry 사용하기
     $ poetry install
     ```
+
 <br>
 
 ## 🎞 run test
@@ -590,7 +595,6 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 ```shell
 $ npm test
 ```
-
 
 ## 🎞 URL
 
