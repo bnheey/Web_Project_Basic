@@ -526,6 +526,22 @@ mongoDB, Flask를 활용하여 모두의 책리뷰 프로젝트를 진행한다.
 <p align = center><img src = "image/bookreview2.PNG" alt="kbo_crawling"><p>
 <br>
 </details>
+<details>
+  <summary><b>📒 Movie Star</b></summary><br>
+
+> practice/bookreview
+
+mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
+
+
+``` shell
+1. DB의 영화인 리스트를 read하여 card로 화면에 보여준다.
+2. 좋아요 버튼을 누르면 좋아요 수가 증가하고, 화면의 card는 좋아요가 많은 순서로 정렬된다.
+3. 삭제 버튼을 누르면 해당 이름을 가진 card를 삭제한다.
+```
+
+
+</details>
 
 <br>
 
