@@ -555,6 +555,8 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 
 ## 🖼 Week05
 
+> https://github.com/bbjoite09/loginmemo
+
 <details>
   <summary><b>5.1 로그인 창 구현하기</b></summary><br>
 </details>
