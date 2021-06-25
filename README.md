@@ -566,6 +566,36 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 </details>
 <br>
 
+## 🖼 Week06 - Week09 <br>
+
+> https://github.com/parkingWhere
+
+서울 열린데이터 광장 - <a href="http://data.seoul.go.kr/dataList/OA-13122/S/1/datasetView.do">
+서울시 공영주차장 정보 api</a> <br>
+kakao developers - <a href = "https://apis.map.kakao.com/web/sample/keywordBasic/">지도 api</a>,
+<a href="https://apis.map.kakao.com/web/sample/basicMap/">검색 api</a>를 이용하여 <code>공영주차장 정보 검색 웹 페이지</code>를 개발한다.
+<br>
+<br>
+<p align="center">
+
+|구분|내용|
+|:------:|:---:|
+|프로젝트 주제|웹 애플리케이션 개발|
+|개발 언어|react, HTML5, CSS3, jQuery, Ajax, flask, pymongo|
+|개발 인원|4명|
+|개발 기간|3주|
+|배포|AWS EC2|
+
+</p><br>
+
+## 🖼 Week10
+
+6-9주차 동안 진행하였던 팀프로젝트 Parking_where 웹페이지에 대하여 발표하였다.<br>
+완성 이미지 예시는 아래와 같다.
+
+<br>
+<p align="center"><img src="image/parking_where.jpg"></p><br>
+
 ## 🎞 Create New Project
 
 <details>
