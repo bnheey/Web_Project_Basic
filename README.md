@@ -330,6 +330,7 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
        <br><code>2. 네이버 책 검색 API를 이용하여 책 정보를 출력하기</code> 실습과 유사한 방법으로 간단한 한-영 번역기를 만들기 실습을 진행 해본다.<br>
        <br> 실습 결과는 아래와 같다.
        <p align = left><img src = "image/translator.PNG" alt="translator_result"><p>
+
 </details>
 <details>
   <summary><b>3.4 Web Scrapping(Crawling)</b></summary><br>
@@ -341,49 +342,329 @@ week01에서 bootstrap을 이용해 만든 나만의 메모장에 아티클 정�
 > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/scrap.py"> practice/week03/crawling.py</a>
 
 아래 내용을 참고하여 <a href="https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20200716 ">네이버 영화 정보 사이트</a>
-    에서 <code>영화 순위, 제목, 평점</code>을 크롤링 해오는 프로젝트를 진행해본다.<br>
-    
+에서 <code>영화 순위, 제목, 평점</code>을 크롤링 해오는 프로젝트를 진행해본다.<br>
+
 ```python
 from bs4 import BeautifulSoup
 
 # 네이버 영화 정보 사이트를 읽어 HTML을 받아온다.
-headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
-data = requests.get('https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20200716',headers=headers)
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
+data = requests.get('https://movie.naver.com/movie/sdb/rank/rmovie.nhn?sel=pnt&date=20200716', headers=headers)
 
 # 받아온 HTML을 파싱에 용이한 형태로 변경한다.
 soup = BeautifulSoup(data.text, 'html.parser')
 ```
+
 <br>
 </details>
 
 <details>
   <summary><b>📒 genie music 순위 & 한국 프로야구 순위 크롤링</b></summary>
-    
+
 - genie music 순위 크롤링
 
-    > practice/week03/homework/genie.py
-  
-    <a href = "https://www.genie.co.kr/chart/top200?ditc=D&rtm=N&ymd=20210514">genie music 사이트</a>에서 <code>차트 순위, 제목, 가수 이름</code>을 크롤링 한다.
-    출력 결과는 아래와 같다.<br>
-  
+  > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/homework/genie.py">practice/week03/homework/genie.py</a>
+
+  <a href = "https://www.genie.co.kr/chart/top200?ditc=D&rtm=N&ymd=20210514">genie music 사이트</a>에서 <code>차트 순위, 제목, 가수
+  이름</code>을 크롤링 한다. 출력 결과는 아래와 같다.<br>
+
     <p align = left><img src = "image/genie.PNG" alt="genie_crawling"><p>
-  
+
 
 - 한국 프로야구 순위 크롤링
 
-    > practice/week03/homework/baseball.py
-  
-    <a href = "https://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo">한국 프로야구 순위 페이지</a>에서 승률이 0.5 이상인 프로야구 팀의 <code>현재 순위, 이름, 승률</code>을 크롤링 한다.
-    출력 결과는 아래와 같다.<br>
-  
+  > <a href="https://github.com/bbjoite09/SeriesD/blob/master/practice/week03/homework/baseball.py">practice/week03/homework/baseball.py</a>
+
+  <a href = "https://sports.news.naver.com/kbaseball/record/index.nhn?category=kbo">한국 프로야구 순위 페이지</a>에서 승률이 0.5 이상인
+  프로야구 팀의 <code>현재 순위, 이름, 승률</code>을 크롤링 한다. 출력 결과는 아래와 같다.<br>
+
     <p align = left><img src = "image/baseball.PNG" alt="kbo_crawling"><p>
+
 </details><br>
 
 ## 🖼 Week04
 
 <details>
-  <summary><b>4.1</b></summary>
+  <summary><b>4.1 MongoDB</b></summary><br>
+
+> practice/week04/db_practice01.py
+
+> practice/week04/db_practice02.py
+
+> practice/week04/genie_db.py
+
+- 준비하기
+
+    1. <a href = "http://localhost:27017/">localhost:27017</a>에서 아래의 메시지가 출력되는지 확인하여 mongoDB가 정상적으로 작동하고 있는지를 알아볼 수 있다.
+
+        ```shell
+        It looks like you are trying to access MongoDB over HTTP on the native driver port.
+        ```
+
+    2. robo3T를 사용하면 mongoDB만으로는 가시적으로 보지못하였던 DB내부 내용을 편리하게 확인할 수 있다. robo3T를 실행하고 create - connection 하여 setting한다.
+
+    3. pycharm에서 pymongo 패키지를 설치한다.
+
+
+- CRUD
+
+  ```python
+  from pymongo import MongoClient
+
+  client = MongoClient
+  db = client.get_database('person')
+  
+  # Create
+  db.users.insert_one({'name' : '홍길동', 'age' : 27})
+  db.users.insert_one({'name' : '차태현', 'age' : 27})
+  db.users.insert_one({'name' : '아이유', 'age' : 29})
+  
+  # Read
+  read1 = db.users.find_one({'name': '홍길동'}) # 하나
+  read2 = list(db.users.find({'age': 27}, {'_id': False})) # 여러 값
+  
+  # Update
+  db.users.update_one({'name': '홍길동'}, {'$set': {'age': 20}}) # 하나
+  db.users.update_many({'age': 27}, { '$set': {'age': 70}}) # 여러 값
+  
+  # Delete
+  db.users.delete_one({'name': '홍길동'})
+  ```
+  <br>
+
 </details>
+
+<details>
+  <summary><b>4.2 Flask</b></summary>
+
+Flask는 python으로 작동되는 웹 프레임워크이다. Flask를 이용함으로써 서버를 구동할때 필요한 복잡한 과정을 간단하게 이용할 수 있다.
+
+- 준비하기
+
+    1. pycharm에서 flask 패키지를 설치한다.
+    2. Flask의 기본 폴더 구조는 아래와 같다.
+
+        ```shell
+        - static 폴더 : 이미지, css파일
+        - templates 폴더 : html파일
+        - app.py 파일 : Flask 서버를 실행시키는 파일
+        ```
+
+- app.py<br><br>
+  > practice/week04/app.py
+
+  app.py에 아래 내용을 작성하고, chrome 에서 <a href="http://localhost:5000/">localhost:5000/</a>
+  에 접속하면 Hello World! 가 출력된 것을 확인할 수 있다. 필요에 따라 경로를 정하면 된다.
+
+    ```python
+    from flask import Flask
+    
+    app = Flask(__name__)
+    
+    # @app.route로 경로를 설정할 수 있다.
+    # localhost:5000에서 경로'/'로 접속하면 hello_world() 함수가 실행된다.
+    @app.route('/')
+    def hello_world():
+        return 'Hello World!'
+    
+    if __name__ == '__main__':
+        app.run('0.0.0.0', port=5000, debug=True)
+    ```
+  <br>
+- API 만들기
+
+  app.py에서 API를 만들어 사용할 수 있다. 이때 API의 method는 GET, POST 등의 방식이 있다.
+  <br> API는 서버와 클라이언트 사이에서 정해진 형식으로 데이터를 주고받아야 한다. 정해진 정보를 구성하는 내용은 아래와 같다.
+
+    ```shell
+    1. Client request 정보 : 요청 URL, 요청 방식 (GET / POST /...)
+    2. 서버가 제공할 기능 : Read, Create 등
+    3. Response 데이터  : 응답하는 데이터의 내용
+    ```
+
+    1. GET 방식 API 생성
+
+        ```python
+        from flask import Flask, render_template, jsonify, request
+      
+        # @app.route에 request method 추가로 기술(GET)
+        @app.route('/test', methods=['GET'])
+        def test_get():
+            title_receive = request.args.get('title_give')
+            print(title_receive)
+            return jsonify({'result': 'success', 'msg': '이 요청은 GET!'})
+        ```
+
+    2. POST 방식 API 생성
+
+        ```python
+        from flask import Flask, render_template, jsonify, request
+      
+        @app.route('/test', methods=['POST'])
+        def test_post():
+            title_receive = request.form['title_give']
+            print(title_receive)
+            return jsonify({'result': 'success', 'msg': '이 요청은 POST!'})
+        ```
+    <br>
+    생성한 API를 사용한 결과는 아래와 같다.
+    <p align="center"><img src="image/make_api.PNG"></p><br>
+
+</details>
+
+<details>
+  <summary><b>📒 모두의 책 리뷰</b></summary><br>
+
+> practice/bookreview
+
+mongoDB, Flask를 활용하여 모두의 책리뷰 프로젝트를 진행한다.
+
+```
+1. 제목, 저자, 리뷰를 저장한다. 이때 입력하지 않은 란이 있다면 alert()을 띄운다
+   (focus()를 사용하면 alert을 띄운 뒤 해당 란으로 커서를 이동시킬 수 있다.)
+2. 모든란에 입력을 완료했다면, 아래의 책 리스트에 등록한다.
+```
+
+실습 내용은 아래와 같다.
+<p align = center><img src = "image/bookreview1.PNG" alt="kbo_crawling"></p>
+
+<p align = center><img src = "image/bookreview2.PNG" alt="kbo_crawling"></p>
+<br>
+</details>
+<details>
+  <summary><b>📒 Movie Star</b></summary><br>
+
+> practice/bookreview
+
+mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
+
+``` shell
+1. DB의 영화인 리스트를 read하여 card로 화면에 보여준다.
+2. 좋아요 버튼을 누르면 좋아요 수가 증가하고, 화면의 card는 좋아요가 많은 순서로 정렬된다.
+3. 삭제 버튼을 누르면 해당 이름을 가진 card를 삭제한다.
+```
+
+실습 내용은 아래와 같다.
+<p align=center><img src="image/moviestar.JPG" alt="movieStar project example"></p>
+
+
+</details>
+
+<br>
+
+## 🖼 Week05
+
+> https://github.com/bbjoite09/loginmemo
+
+<details>
+  <summary><b>5.1 JWT 기반 ID/PW 로그인</b></summary><br>
+    아이디와 패스워드를 입력할 수 있는 로그인 화면과,
+    회원가입을 할 수 있는 회원가입 화면을 제작하여 관련한 동작을 추가한다.<br>ksf
+    제작한 페이지는 flask 에서 /login, /register 경로로 각각  render한다. 이후 사용자가 사이트에 진입하였을 때, 쿠키를 확인하고 로그인 정보가 없을 경우에는 로그인 페이지로 이동시키도록 설계한다. 이는 html 문서에 아래 쿠키 관리 플러그인 문장을 추가해준 후 token을 비교하여 구현할 수 있다. 
+<br>
+
+  ```html
+<!--jQuery 쿠키 관리 플러그인-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  ```
+
+<br>추가로 회원가입 api를 만들어줄때 비밀번호는 평문이 아닌 SHA256 알고리즘을 사용해 단방향 암호화를 적용시킨다.
+
+```python
+@app.route('/api/register', methods=['POST'])
+def api_register():
+    id = request.form['id_give']
+    pw = request.form['pw_give']
+
+    pw_hash = hashlib.sha256(pw.encode()).hexdigest()
+    db.user.insert_one({'id': id, 'pw': pw_hash})
+
+    return jsonify({'result': 'success'})
+```
+
+이후 로그인 기능이 성공적으로 추가되었다면 각 회원은 독립적인 <3주차 memo.html>를 이용할 수 있도록 서비스를 구현한다.
+
+<br>
+
+</details>
+
+<details>
+  <summary><b>5.2 네이버 아이디로 로그인 기능 추가하기 (네아로 API)</b></summary><br>
+
+naver developers - <a href="https://developers.naver.com/products/login/api/api.md">
+네이버 아이디로 로그인 api</a>를 이용하여 위에서 개발한 회원가입 기능에 네이버 아이디로 로그인하기 기능을 추가한다. 
+
+</details>
+<br>
+
+## 🖼 Week06 - Week09 <br>
+
+> https://github.com/parkingWhere
+
+서울 열린데이터 광장 - <a href="http://data.seoul.go.kr/dataList/OA-13122/S/1/datasetView.do">
+서울시 공영주차장 정보 api</a> <br>
+kakao developers - <a href = "https://apis.map.kakao.com/web/sample/keywordBasic/">지도 api</a>,
+<a href="https://apis.map.kakao.com/web/sample/basicMap/">검색 api</a>를 이용하여 <code>공영주차장 정보 검색 웹 페이지</code>를 개발한다.
+<br>
+<br>
+<p align="center">
+
+|구분|내용|
+|:------:|:---:|
+|프로젝트 주제|웹 애플리케이션 개발|
+|개발 언어|react, HTML5, CSS3, jQuery, Ajax, flask, pymongo|
+|개발 인원|4명|
+|개발 기간|3주|
+|배포|AWS EC2|
+
+</p><br>
+
+## 🖼 Week10
+
+6-9주차 동안 진행하였던 팀프로젝트 Parking_where 웹페이지에 대하여 발표하였다.<br>
+완성 이미지 예시는 아래와 같다.
+
+<br>
+<p align="center"><img src="image/parking_where.jpg"></p><br>
+
+## 🎞 Create New Project
+
+<details>
+  <summary><b>환경 세팅 절차</b></summary><br>
+
+1. python 가상환경(venv) 만들기
+2. .gitignore 추가
+3. LICENSE 추가(플러그인 설치해서)
+4. README.md 추가
+5. git init(pycharm VCS에서 git 설정)
+6. git flow init
+7. 프로젝트 github 공유
+8. master, develop 브랜치 깃허브에 푸시되었는지 확인
+9. poetry init
+10. poetry add flask
+11. poetry add pymongo
+12. 커밋
+
+</details><br>
+
+* poetry
+
+  poetry를 사용하면 다른 컴퓨터에서 프로그램을 사용할 때 간편하게 환경을 세팅할 수 있다. <a href="https://python-poetry.org/docs/"> 여기 </a>
+  를 참고하여 poetry를 설치할 수 있다.
+
+    ```shell
+    $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+    $ (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -
+    
+    # poetry로 패키지를 추가하기
+    $ poetry add <패키지명>
+  
+    # poetry 사용하기
+    $ poetry install
+    ```
+
+<br>
 
 ## 🎞 run test
 
