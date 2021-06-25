@@ -558,11 +558,43 @@ mongoDB, Flask를 활용하여 Movie Star 프로젝트를 진행한다.
 > https://github.com/bbjoite09/loginmemo
 
 <details>
-  <summary><b>5.1 로그인 창 구현하기</b></summary><br>
+  <summary><b>5.1 JWT 기반 ID/PW 로그인</b></summary><br>
+    아이디와 패스워드를 입력할 수 있는 로그인 화면과,
+    회원가입을 할 수 있는 회원가입 화면을 제작하여 관련한 동작을 추가한다.<br>ksf
+    제작한 페이지는 flask 에서 /login, /register 경로로 각각  render한다. 이후 사용자가 사이트에 진입하였을 때, 쿠키를 확인하고 로그인 정보가 없을 경우에는 로그인 페이지로 이동시키도록 설계한다. 이는 html 문서에 아래 쿠키 관리 플러그인 문장을 추가해준 후 token을 비교하여 구현할 수 있다. 
+<br>
+
+  ```html
+<!--jQuery 쿠키 관리 플러그인-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  ```
+
+<br>추가로 회원가입 api를 만들어줄때 비밀번호는 평문이 아닌 SHA256 알고리즘을 사용해 단방향 암호화를 적용시킨다.
+
+```python
+@app.route('/api/register', methods=['POST'])
+def api_register():
+    id = request.form['id_give']
+    pw = request.form['pw_give']
+
+    pw_hash = hashlib.sha256(pw.encode()).hexdigest()
+    db.user.insert_one({'id': id, 'pw': pw_hash})
+
+    return jsonify({'result': 'success'})
+```
+
+이후 로그인 기능이 성공적으로 추가되었다면 각 회원은 독립적인 <3주차 memo.html>를 이용할 수 있도록 서비스를 구현한다.
+
+<br>
+
 </details>
 
 <details>
   <summary><b>5.2 네이버 아이디로 로그인 기능 추가하기 (네아로 API)</b></summary><br>
+
+naver developers - <a href="https://developers.naver.com/products/login/api/api.md">
+네이버 아이디로 로그인 api</a>를 이용하여 위에서 개발한 회원가입 기능에 네이버 아이디로 로그인하기 기능을 추가한다. 
+
 </details>
 <br>
 
