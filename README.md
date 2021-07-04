@@ -1,4 +1,4 @@
-# 🎨 Web_Development 🎨
+# 🎨 Web_Project_Basic 🎨
 
 🖌 2021.04.17 - 2021.06.19<br>
 🖌 청년공간 이룸 - SeriesD Developer 과정<br>
